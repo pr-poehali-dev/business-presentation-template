@@ -23,32 +23,32 @@ const Index = () => {
 
   const services = [
     {
-      icon: 'Building2',
-      title: 'Управление жилой недвижимостью',
-      description: 'Профессиональное управление многоквартирными домами, ЖК и апартаментами'
+      icon: 'Home',
+      title: 'Жилые комплексы',
+      description: 'Полный цикл управления элитными жилыми комплексами и апартаментами премиум-класса'
     },
     {
-      icon: 'Briefcase',
-      title: 'Коммерческая недвижимость',
-      description: 'Управление офисными центрами, торговыми площадями и складскими комплексами'
+      icon: 'Building',
+      title: 'Бизнес-центры',
+      description: 'Эксплуатация и управление офисными зданиями класса А и В+'
     },
     {
-      icon: 'Users',
-      title: 'Консультационные услуги',
-      description: 'Экспертные консультации по вопросам эксплуатации и развития объектов'
+      icon: 'ShoppingBag',
+      title: 'Торговая недвижимость',
+      description: 'Управление ТЦ, стрит-ритейл и торговыми галереями с высокой проходимостью'
     },
     {
-      icon: 'TrendingUp',
-      title: 'Инвестиционный анализ',
-      description: 'Оценка эффективности инвестиций и повышение стоимости активов'
+      icon: 'Warehouse',
+      title: 'Индустриальная недвижимость',
+      description: 'Логистические комплексы, производственные и складские площади'
     }
   ];
 
   const stats = [
-    { value: '150+', label: 'Объектов в управлении' },
-    { value: '12 лет', label: 'На рынке' },
-    { value: '98%', label: 'Довольных клиентов' },
-    { value: '500+', label: 'Профессионалов в команде' }
+    { value: '2.5M', label: 'м² под управлением' },
+    { value: '180+', label: 'Объектов в портфеле' },
+    { value: '15', label: 'Лет на рынке' },
+    { value: '600+', label: 'Сотрудников' }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -78,7 +78,7 @@ const Index = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/d70e5b06-26ac-4b89-8ff0-64a89ae7cd39.jpg)',
+              backgroundImage: 'url(https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/0fe4a0b8-aa12-482c-b804-7fea8b6a2591.jpg)',
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
@@ -89,10 +89,10 @@ const Index = () => {
               <Icon name="Building2" size={80} className="mx-auto mb-6 text-accent" />
             </div>
             <h1 className="text-6xl md:text-7xl font-bold mb-6">
-              Премиум Управление
+              Управление Недвижимостью
             </h1>
             <p className="text-2xl md:text-3xl mb-8 font-light">
-              Недвижимость под контролем профессионалов
+              Эффективность. Надежность. Результат.
             </p>
             <div className="flex gap-4 justify-center">
               <Button
@@ -127,26 +127,26 @@ const Index = () => {
               <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">Наша миссия</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Создавать максимальную ценность для владельцев недвижимости через 
-                  профессиональное управление, инновационные технологии и индивидуальный 
-                  подход к каждому объекту.
+                  Мы обеспечиваем максимальную доходность активов через комплексное 
+                  управление, передовые цифровые технологии и глубокую экспертизу 
+                  в коммерческой недвижимости.
                 </p>
               </Card>
 
               <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Наши ценности</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-primary">Наши преимущества</h3>
                 <ul className="space-y-3 text-lg text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Прозрачность и открытость</span>
+                    <Icon name="Shield" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Соответствие международным стандартам</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Профессионализм команды</span>
+                    <Icon name="Zap" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Цифровая платформа управления</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Инновационные решения</span>
+                    <Icon name="Award" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Сертифицированная команда экспертов</span>
                   </li>
                 </ul>
               </Card>
