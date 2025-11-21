@@ -1,12 +1,403 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const slides = [
+    { id: 0, title: 'Титульный слайд' },
+    { id: 1, title: 'О компании' },
+    { id: 2, title: 'Услуги' },
+    { id: 3, title: 'Контакты' }
+  ];
+
+  const services = [
+    {
+      icon: 'Building2',
+      title: 'Управление жилой недвижимостью',
+      description: 'Профессиональное управление многоквартирными домами, ЖК и апартаментами'
+    },
+    {
+      icon: 'Briefcase',
+      title: 'Коммерческая недвижимость',
+      description: 'Управление офисными центрами, торговыми площадями и складскими комплексами'
+    },
+    {
+      icon: 'Users',
+      title: 'Консультационные услуги',
+      description: 'Экспертные консультации по вопросам эксплуатации и развития объектов'
+    },
+    {
+      icon: 'TrendingUp',
+      title: 'Инвестиционный анализ',
+      description: 'Оценка эффективности инвестиций и повышение стоимости активов'
+    }
+  ];
+
+  const stats = [
+    { value: '150+', label: 'Объектов в управлении' },
+    { value: '12 лет', label: 'На рынке' },
+    { value: '98%', label: 'Довольных клиентов' },
+    { value: '500+', label: 'Профессионалов в команде' }
+  ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <div className="fixed top-8 right-8 z-50 flex gap-2">
+        {slides.map((slide) => (
+          <button
+            key={slide.id}
+            onClick={() => setCurrentSlide(slide.id)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              currentSlide === slide.id
+                ? 'bg-accent w-8'
+                : 'bg-slate-300 hover:bg-slate-400'
+            }`}
+            aria-label={`Слайд ${slide.id + 1}`}
+          />
+        ))}
       </div>
+
+      {currentSlide === 0 && (
+        <div className="min-h-screen flex items-center justify-center relative overflow-hidden animate-fade-in">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: 'url(https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/d70e5b06-26ac-4b89-8ff0-64a89ae7cd39.jpg)',
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
+          </div>
+          
+          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
+            <div className="mb-6">
+              <Icon name="Building2" size={80} className="mx-auto mb-6 text-accent" />
+            </div>
+            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+              Премиум Управление
+            </h1>
+            <p className="text-2xl md:text-3xl mb-8 font-light">
+              Недвижимость под контролем профессионалов
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Button
+                onClick={() => setCurrentSlide(1)}
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-primary font-semibold"
+              >
+                Узнать больше
+              </Button>
+              <Button
+                onClick={() => setCurrentSlide(3)}
+                size="lg"
+                variant="outline"
+                className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20"
+              >
+                Связаться с нами
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {currentSlide === 1 && (
+        <div className="min-h-screen py-20 px-4 animate-fade-in">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-primary mb-4">О компании</h2>
+              <div className="w-24 h-1 bg-accent mx-auto" />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-2xl font-semibold mb-4 text-primary">Наша миссия</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Создавать максимальную ценность для владельцев недвижимости через 
+                  профессиональное управление, инновационные технологии и индивидуальный 
+                  подход к каждому объекту.
+                </p>
+              </Card>
+
+              <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-2xl font-semibold mb-4 text-primary">Наши ценности</h3>
+                <ul className="space-y-3 text-lg text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Прозрачность и открытость</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Профессионализм команды</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Инновационные решения</span>
+                  </li>
+                </ul>
+              </Card>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <div className="text-4xl font-bold text-accent mb-2">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </Card>
+              ))}
+            </div>
+
+            <div className="flex justify-center gap-4 mt-12">
+              <Button
+                onClick={() => setCurrentSlide(0)}
+                variant="outline"
+                size="lg"
+              >
+                <Icon name="ChevronLeft" size={20} />
+                Назад
+              </Button>
+              <Button
+                onClick={() => setCurrentSlide(2)}
+                size="lg"
+                className="bg-primary hover:bg-primary/90"
+              >
+                Далее
+                <Icon name="ChevronRight" size={20} />
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {currentSlide === 2 && (
+        <div className="min-h-screen py-20 px-4 animate-fade-in">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-primary mb-4">Наши услуги</h2>
+              <div className="w-24 h-1 bg-accent mx-auto mb-6" />
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Комплексные решения для управления недвижимостью любого типа
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {services.map((service, index) => (
+                <Card
+                  key={index}
+                  className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-4 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                      <Icon name={service.icon} size={32} className="text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3 text-primary">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="p-8 bg-gradient-to-r from-primary to-primary/90 text-white">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">Нужна консультация?</h3>
+                  <p className="text-lg opacity-90">
+                    Свяжитесь с нами для обсуждения вашего проекта
+                  </p>
+                </div>
+                <Button
+                  onClick={() => setCurrentSlide(3)}
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-primary font-semibold"
+                >
+                  Связаться
+                  <Icon name="ArrowRight" size={20} />
+                </Button>
+              </div>
+            </Card>
+
+            <div className="flex justify-center gap-4 mt-12">
+              <Button
+                onClick={() => setCurrentSlide(2)}
+                variant="outline"
+                size="lg"
+              >
+                <Icon name="ChevronLeft" size={20} />
+                Назад
+              </Button>
+              <Button
+                onClick={() => setCurrentSlide(3)}
+                size="lg"
+                className="bg-primary hover:bg-primary/90"
+              >
+                Далее
+                <Icon name="ChevronRight" size={20} />
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {currentSlide === 3 && (
+        <div className="min-h-screen py-20 px-4 animate-fade-in">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-primary mb-4">Контакты</h2>
+              <div className="w-24 h-1 bg-accent mx-auto mb-6" />
+              <p className="text-xl text-muted-foreground">
+                Свяжитесь с нами удобным для вас способом
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-8">
+                <h3 className="text-2xl font-semibold mb-6 text-primary">Напишите нам</h3>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <Input
+                      placeholder="Ваше имя"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="h-12"
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="h-12"
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="tel"
+                      placeholder="Телефон"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="h-12"
+                    />
+                  </div>
+                  <div>
+                    <Textarea
+                      placeholder="Ваше сообщение"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="min-h-32"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold"
+                  >
+                    Отправить заявку
+                    <Icon name="Send" size={20} />
+                  </Button>
+                </form>
+              </Card>
+
+              <div className="space-y-6">
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-accent/10 rounded-lg">
+                      <Icon name="Phone" size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Телефон</h4>
+                      <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                      <p className="text-muted-foreground">+7 (800) 555-35-35</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-accent/10 rounded-lg">
+                      <Icon name="Mail" size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Email</h4>
+                      <p className="text-muted-foreground">info@premiumrealty.ru</p>
+                      <p className="text-muted-foreground">sales@premiumrealty.ru</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-accent/10 rounded-lg">
+                      <Icon name="MapPin" size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Адрес</h4>
+                      <p className="text-muted-foreground">
+                        Москва, ул. Тверская, д. 1<br />
+                        БЦ "Премиум", офис 501
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-accent/10 rounded-lg">
+                      <Icon name="Clock" size={24} className="text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Режим работы</h4>
+                      <p className="text-muted-foreground">
+                        Пн-Пт: 9:00 - 19:00<br />
+                        Сб-Вс: 10:00 - 16:00
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-4 mt-12">
+              <Button
+                onClick={() => setCurrentSlide(2)}
+                variant="outline"
+                size="lg"
+              >
+                <Icon name="ChevronLeft" size={20} />
+                Назад
+              </Button>
+              <Button
+                onClick={() => setCurrentSlide(0)}
+                size="lg"
+                className="bg-primary hover:bg-primary/90"
+              >
+                В начало
+                <Icon name="Home" size={20} />
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
