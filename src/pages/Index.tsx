@@ -23,32 +23,32 @@ const Index = () => {
 
   const services = [
     {
-      icon: 'Home',
-      title: 'Жилые комплексы',
-      description: 'Полный цикл управления элитными жилыми комплексами и апартаментами премиум-класса'
+      icon: 'BarChart3',
+      title: 'Финансовый менеджмент',
+      description: 'Бюджетирование, финансовая отчетность и контроль затрат в режиме реального времени'
     },
     {
-      icon: 'Building',
-      title: 'Бизнес-центры',
-      description: 'Эксплуатация и управление офисными зданиями класса А и В+'
+      icon: 'Wrench',
+      title: 'Техническое обслуживание',
+      description: 'Комплексное техническое обслуживание инженерных систем и инфраструктуры объектов'
     },
     {
-      icon: 'ShoppingBag',
-      title: 'Торговая недвижимость',
-      description: 'Управление ТЦ, стрит-ритейл и торговыми галереями с высокой проходимостью'
+      icon: 'Users2',
+      title: 'Работа с арендаторами',
+      description: 'Управление арендными отношениями и сервисное обслуживание резидентов'
     },
     {
-      icon: 'Warehouse',
-      title: 'Индустриальная недвижимость',
-      description: 'Логистические комплексы, производственные и складские площади'
+      icon: 'LineChart',
+      title: 'Аналитика и развитие',
+      description: 'Стратегическое планирование и повышение стоимости объектов недвижимости'
     }
   ];
 
   const stats = [
-    { value: '2.5M', label: 'м² под управлением' },
-    { value: '180+', label: 'Объектов в портфеле' },
-    { value: '15', label: 'Лет на рынке' },
-    { value: '600+', label: 'Сотрудников' }
+    { value: '₽3.2B', label: 'Стоимость активов' },
+    { value: '250+', label: 'Объектов в управлении' },
+    { value: '99.2%', label: 'Уровень занятости' },
+    { value: '24/7', label: 'Поддержка клиентов' }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -78,7 +78,7 @@ const Index = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/0fe4a0b8-aa12-482c-b804-7fea8b6a2591.jpg)',
+              backgroundImage: 'url(https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/bf7e0a10-95ed-4b3d-9482-040359260c4f.jpg)',
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
@@ -89,10 +89,10 @@ const Index = () => {
               <Icon name="Building2" size={80} className="mx-auto mb-6 text-accent" />
             </div>
             <h1 className="text-6xl md:text-7xl font-bold mb-6">
-              Управление Недвижимостью
+              PropertyPro
             </h1>
             <p className="text-2xl md:text-3xl mb-8 font-light">
-              Эффективность. Надежность. Результат.
+              Управление коммерческой недвижимостью нового поколения
             </p>
             <div className="flex gap-4 justify-center">
               <Button
@@ -127,26 +127,26 @@ const Index = () => {
               <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">Наша миссия</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Мы обеспечиваем максимальную доходность активов через комплексное 
-                  управление, передовые цифровые технологии и глубокую экспертизу 
-                  в коммерческой недвижимости.
+                  Трансформировать управление недвижимостью через инновации, данные и 
+                  клиентоориентированный подход. Мы создаём экосистему, где технологии 
+                  служат людям и бизнесу.
                 </p>
               </Card>
 
               <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Наши преимущества</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-primary">Технологии</h3>
                 <ul className="space-y-3 text-lg text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <Icon name="Shield" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Соответствие международным стандартам</span>
+                    <Icon name="Smartphone" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Мобильное приложение для арендаторов</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Zap" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Цифровая платформа управления</span>
+                    <Icon name="Database" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Big Data аналитика и прогнозирование</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Award" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Сертифицированная команда экспертов</span>
+                    <Icon name="Lock" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>IoT-системы безопасности и мониторинга</span>
                   </li>
                 </ul>
               </Card>
