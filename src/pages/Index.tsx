@@ -86,7 +86,7 @@ const Index = () => {
           
           <div className="relative z-10 text-center text-white px-4 max-w-4xl">
             <div className="mb-6">
-              <Icon name="Building2" size={80} className="mx-auto mb-6 text-accent" />
+              <Icon name="Landmark" size={80} className="mx-auto mb-6 text-accent" />
             </div>
             <h1 className="text-6xl md:text-7xl font-bold mb-6">
               REALTY CAPITAL
