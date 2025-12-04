@@ -171,22 +171,19 @@ const Index = () => {
         <div className="min-h-screen py-20 px-4 animate-fade-in">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-primary mb-4">О компании</h2>
-              <div className="w-24 h-1 bg-accent mx-auto" />
+              <h2 className="text-5xl font-bold text-primary mb-6">Наши преимущества</h2>
+              <div className="w-24 h-1 bg-accent mx-auto mb-8" />
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-4">
+                Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
+              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+                Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента. <span className="text-accent font-semibold">Ваш успех — наш приоритет!</span>
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Наша миссия</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Создавать устойчивую ценность для инвесторов через профессиональное управление 
-                  коммерческими активами. Мы применяем проактивные стратегии и глубокую экспертизу 
-                  для достижения максимальной отдачи от каждого объекта в портфеле.
-                </p>
-              </Card>
-
-              <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Наш подход</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-primary text-center">Что мы предлагаем</h3>
                 <ul className="space-y-3 text-lg text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="TrendingUp" size={24} className="text-accent flex-shrink-0 mt-1" />
