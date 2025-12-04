@@ -175,45 +175,81 @@ const Index = () => {
               <div className="w-24 h-1 bg-accent mx-auto" />
             </div>
 
-            <Card className="p-10 mb-12 bg-gradient-to-br from-white to-slate-50 shadow-xl">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
-              </p>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента. <span className="text-accent font-semibold">Ваш успех — наш приоритет!</span>
-              </p>
+            <div className="mb-12">
+              <Card className="p-8 bg-primary text-white shadow-2xl">
+                <p className="text-xl leading-relaxed mb-6">
+                  Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
+                </p>
+                <p className="text-xl leading-relaxed">
+                  Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента. <span className="text-accent font-bold">Ваш успех — наш приоритет!</span>
+                </p>
+              </Card>
+            </div>
 
-              <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
-                <div className="flex items-start gap-3">
-                  <Icon name="TrendingUp" size={24} className="text-accent flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">Максимизация доходов</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-accent/10 rounded-full">
+                    <Icon name="TrendingUp" size={32} className="text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Максимизация доходов</h3>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="BarChart" size={24} className="text-accent flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">Оптимизация расходов</span>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-accent/10 rounded-full">
+                    <Icon name="BarChart" size={32} className="text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Оптимизация расходов</h3>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Eye" size={24} className="text-accent flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">Прозрачность в работе</span>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-accent/10 rounded-full">
+                    <Icon name="Eye" size={32} className="text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Прозрачность в работе</h3>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Shield" size={24} className="text-accent flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">Снижение рисков</span>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-accent/10 rounded-full">
+                    <Icon name="Shield" size={32} className="text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Снижение рисков</h3>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Users" size={24} className="text-accent flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">Эффективное взаимодействие</span>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-accent/10 rounded-full">
+                    <Icon name="Users" size={32} className="text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Эффективное взаимодействие</h3>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Lightbulb" size={24} className="text-accent flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">Проверенные методы и инновационные решения</span>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-accent/10 rounded-full">
+                    <Icon name="Lightbulb" size={32} className="text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Инновационные решения</h3>
                 </div>
-                <div className="flex items-start gap-3 md:col-span-2">
-                  <Icon name="Heart" size={24} className="text-accent flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
+              </Card>
+              
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-3">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-4 bg-accent/10 rounded-full">
+                    <Icon name="Heart" size={32} className="text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Полная свобода и одновременно отсутствие беспокойства за свой актив</h3>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
