@@ -177,15 +177,15 @@ const Index = () => {
 
             <div className="grid lg:grid-cols-2 gap-12 mb-12">
               <div>
-                <Card className="p-8 bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent h-full">
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <Card className="p-10 bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent h-full flex flex-col justify-center">
+                  <p className="text-xl text-primary leading-relaxed mb-8 font-medium">
                     Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
                   </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-xl text-primary leading-relaxed mb-8 font-medium">
                     Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента.
                   </p>
-                  <div className="mt-6 p-4 bg-accent/20 rounded-lg">
-                    <p className="text-lg font-bold text-primary text-center">Ваш успех — наш приоритет!</p>
+                  <div className="p-6 bg-accent rounded-lg shadow-lg">
+                    <p className="text-2xl font-bold text-primary text-center">Ваш успех — наш приоритет!</p>
                   </div>
                 </Card>
               </div>
