@@ -138,15 +138,31 @@ const Index = () => {
                 <ul className="space-y-3 text-lg text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Icon name="TrendingUp" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Фокус на доходности и рост капитализации</span>
+                    <span>Максимизация доходов</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="BarChart" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Data-driven решения на основе аналитики</span>
+                    <span>Оптимизация расходов</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Briefcase" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Индивидуальные стратегии для каждого актива</span>
+                    <Icon name="Eye" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Прозрачность в работе</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Shield" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Снижение рисков</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Users" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Эффективное взаимодействие</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Lightbulb" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Проверенные методы и инновационные решения</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Heart" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <span>Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
                   </li>
                 </ul>
               </Card>
