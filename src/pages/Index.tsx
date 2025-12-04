@@ -175,80 +175,71 @@ const Index = () => {
               <div className="w-24 h-1 bg-accent mx-auto" />
             </div>
 
-            <div className="mb-12">
-              <Card className="p-8 bg-primary text-white shadow-2xl">
-                <p className="text-xl leading-relaxed mb-6">
-                  Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
-                </p>
-                <p className="text-xl leading-relaxed">
-                  Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента. <span className="text-accent font-bold">Ваш успех — наш приоритет!</span>
-                </p>
-              </Card>
-            </div>
+            <div className="grid lg:grid-cols-2 gap-12 mb-12">
+              <div>
+                <Card className="p-8 bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent h-full">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента.
+                  </p>
+                  <div className="mt-6 p-4 bg-accent/20 rounded-lg">
+                    <p className="text-lg font-bold text-primary text-center">Ваш успех — наш приоритет!</p>
+                  </div>
+                </Card>
+              </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-4 bg-accent/10 rounded-full">
-                    <Icon name="TrendingUp" size={32} className="text-accent" />
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="TrendingUp" size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Максимизация доходов</h3>
+                  <span className="text-lg font-semibold text-primary">Максимизация доходов</span>
                 </div>
-              </Card>
-              
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-4 bg-accent/10 rounded-full">
-                    <Icon name="BarChart" size={32} className="text-accent" />
+
+                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="BarChart" size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Оптимизация расходов</h3>
+                  <span className="text-lg font-semibold text-primary">Оптимизация расходов</span>
                 </div>
-              </Card>
-              
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-4 bg-accent/10 rounded-full">
-                    <Icon name="Eye" size={32} className="text-accent" />
+
+                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Eye" size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Прозрачность в работе</h3>
+                  <span className="text-lg font-semibold text-primary">Прозрачность в работе</span>
                 </div>
-              </Card>
-              
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-4 bg-accent/10 rounded-full">
-                    <Icon name="Shield" size={32} className="text-accent" />
+
+                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Shield" size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Снижение рисков</h3>
+                  <span className="text-lg font-semibold text-primary">Снижение рисков</span>
                 </div>
-              </Card>
-              
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-4 bg-accent/10 rounded-full">
-                    <Icon name="Users" size={32} className="text-accent" />
+
+                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Users" size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Эффективное взаимодействие</h3>
+                  <span className="text-lg font-semibold text-primary">Эффективное взаимодействие</span>
                 </div>
-              </Card>
-              
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-4 bg-accent/10 rounded-full">
-                    <Icon name="Lightbulb" size={32} className="text-accent" />
+
+                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Lightbulb" size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Инновационные решения</h3>
+                  <span className="text-lg font-semibold text-primary">Проверенные методы и инновационные решения</span>
                 </div>
-              </Card>
-              
-              <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-3">
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-4 bg-accent/10 rounded-full">
-                    <Icon name="Heart" size={32} className="text-accent" />
+
+                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Heart" size={28} className="text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Полная свобода и одновременно отсутствие беспокойства за свой актив</h3>
+                  <span className="text-lg font-semibold text-primary">Полная свобода и отсутствие беспокойства</span>
                 </div>
-              </Card>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
