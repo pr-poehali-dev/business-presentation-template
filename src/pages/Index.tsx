@@ -23,24 +23,57 @@ const Index = () => {
 
   const services = [
     {
-      icon: 'Target',
-      title: 'Стратегическое планирование',
-      description: 'Разработка долгосрочных стратегий развития объектов недвижимости с максимизацией доходности'
+      icon: 'Settings',
+      title: 'Операционное управление',
+      description: 'Ежедневное управление объектами, контроль за выполнением договорных обязательств и обеспечение бесперебойной работы'
+    },
+    {
+      icon: 'Wrench',
+      title: 'Техническое сопровождение',
+      description: 'Техническое обслуживание и ремонт, профилактика и модернизация инженерных систем'
+    },
+    {
+      icon: 'Calculator',
+      title: 'Бухгалтерское сопровождение',
+      description: 'Ведение финансовой отчетности, контроль затрат и подготовка документов'
     },
     {
       icon: 'PieChart',
-      title: 'Финансовая оптимизация',
-      description: 'Управление операционными расходами и повышение прибыльности через инновационные решения'
+      title: 'Финансовое планирование',
+      description: 'Оптимизация доходов и расходов, разработка бюджета и финансовых стратегий'
     },
     {
-      icon: 'RefreshCw',
-      title: 'Реструктуризация активов',
-      description: 'Модернизация и репозиционирование объектов для увеличения их рыночной стоимости'
+      icon: 'FileSearch',
+      title: 'Аудит процессов',
+      description: 'Проведение комплексных проверок для повышения эффективности работы объектов и улучшения бизнес-процессов'
     },
     {
       icon: 'Globe',
-      title: 'Маркетинг и позиционирование',
+      title: 'Маркетинг',
       description: 'Комплексное продвижение объектов на рынке и привлечение целевых арендаторов'
+    },
+    {
+      icon: 'Scale',
+      title: 'Юридическое сопровождение',
+      description: 'Правовая поддержка сделок, договоров и решение юридических вопросов'
+    }
+  ];
+
+  const additionalServices = [
+    {
+      icon: 'Users',
+      title: 'Подготовка и подбор кадров',
+      description: 'Поиск квалифицированных специалистов для эффективного управления'
+    },
+    {
+      icon: 'FileText',
+      title: 'Разработка внутренних инструкций и регламентов',
+      description: 'Создание стандартов и процедур для оптимизации работы'
+    },
+    {
+      icon: 'Workflow',
+      title: 'Выстраивание рабочих процессов и автоматизация управления',
+      description: 'Оптимизация бизнес-процессов с использованием современных технологий'
     }
   ];
 
@@ -231,6 +264,32 @@ const Index = () => {
                   </div>
                 </Card>
               ))}
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-3xl font-bold text-primary mb-8 text-center">Дополнительные услуги</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {additionalServices.map((service, index) => (
+                  <Card
+                    key={index}
+                    className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+                  >
+                    <div className="flex flex-col items-center text-center gap-4">
+                      <div className="p-4 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                        <Icon name={service.icon} size={28} className="text-accent" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold mb-2 text-primary">
+                          {service.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
             </div>
 
             <Card className="p-8 bg-gradient-to-r from-primary to-primary/90 text-white">
