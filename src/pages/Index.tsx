@@ -25,47 +25,56 @@ const Index = () => {
     {
       icon: 'Handshake',
       title: 'Брокеридж и поиск новых клиентов',
-      description: 'Профессиональный поиск и привлечение арендаторов для максимальной загрузки объектов'
+      description: 'Профессиональный поиск и привлечение арендаторов для максимальной загрузки объектов',
+      featured: true
     },
     {
       icon: 'Settings',
       title: 'Операционное управление',
-      description: 'Ежедневное управление объектами, контроль за выполнением договорных обязательств и обеспечение бесперебойной работы'
+      description: 'Ежедневное управление объектами, контроль за выполнением договорных обязательств и обеспечение бесперебойной работы',
+      featured: true
     },
     {
       icon: 'Wrench',
       title: 'Техническое сопровождение',
-      description: 'Техническое обслуживание и ремонт, профилактика и модернизация инженерных систем'
+      description: 'Техническое обслуживание и ремонт, профилактика и модернизация инженерных систем',
+      featured: false
     },
     {
       icon: 'PieChart',
       title: 'Финансовое планирование и отчетность',
-      description: 'Оптимизация доходов и расходов, разработка бюджета и финансовых стратегий'
+      description: 'Оптимизация доходов и расходов, разработка бюджета и финансовых стратегий',
+      featured: true
     },
     {
       icon: 'TrendingUp',
       title: 'Повышение посещаемости',
-      description: 'Разработка и реализация стратегий для увеличения потока посетителей'
+      description: 'Разработка и реализация стратегий для увеличения потока посетителей',
+      featured: false
     },
     {
       icon: 'Calculator',
       title: 'Бухгалтерское и налоговое сопровождение',
-      description: 'Ведение финансовой отчетности, контроль затрат и подготовка документов'
+      description: 'Ведение финансовой отчетности, контроль затрат и подготовка документов',
+      featured: false
     },
     {
       icon: 'Scale',
       title: 'Юридическое сопровождение сделок и договоров',
-      description: 'Правовая поддержка всех аспектов управления недвижимостью'
+      description: 'Правовая поддержка всех аспектов управления недвижимостью',
+      featured: false
     },
     {
       icon: 'Shield',
       title: 'Обеспечение безопасности и управление рисками',
-      description: 'Комплексная защита объектов и минимизация потенциальных угроз'
+      description: 'Комплексная защита объектов и минимизация потенциальных угроз',
+      featured: false
     },
     {
       icon: 'FileSearch',
       title: 'Аудит процессов',
-      description: 'Проведение комплексных проверок для повышения эффективности работы объектов и улучшения бизнес-процессов'
+      description: 'Проведение комплексных проверок для повышения эффективности работы объектов и улучшения бизнес-процессов',
+      featured: false
     }
   ];
 
@@ -257,10 +266,19 @@ const Index = () => {
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+                  className={`p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group relative ${
+                    service.featured ? 'border-2 border-accent shadow-lg' : ''
+                  }`}
                 >
+                  {service.featured && (
+                    <div className="absolute -top-3 right-6 bg-accent text-primary px-4 py-1 rounded-full text-sm font-semibold">
+                      Популярная услуга
+                    </div>
+                  )}
                   <div className="flex items-start gap-4">
-                    <div className="p-4 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                    <div className={`p-4 rounded-lg transition-colors ${
+                      service.featured ? 'bg-accent/20 group-hover:bg-accent/30' : 'bg-accent/10 group-hover:bg-accent/20'
+                    }`}>
                       <Icon name={service.icon} size={32} className="text-accent" />
                     </div>
                     <div>
