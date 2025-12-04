@@ -172,50 +172,48 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-primary mb-6">Наши преимущества</h2>
-              <div className="w-24 h-1 bg-accent mx-auto mb-8" />
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-4">
-                Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
-              </p>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента. <span className="text-accent font-semibold">Ваш успех — наш приоритет!</span>
-              </p>
+              <div className="w-24 h-1 bg-accent mx-auto" />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-semibold mb-6 text-primary text-center">Что мы предлагаем</h3>
-                <ul className="space-y-3 text-lg text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <Icon name="TrendingUp" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Максимизация доходов</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="BarChart" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Оптимизация расходов</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Eye" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Прозрачность в работе</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Shield" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Снижение рисков</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Users" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Эффективное взаимодействие</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Lightbulb" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Проверенные методы и инновационные решения</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Heart" size={24} className="text-accent flex-shrink-0 mt-1" />
-                    <span>Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
+            <Card className="p-10 mb-12 bg-gradient-to-br from-white to-slate-50 shadow-xl">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+                Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
+              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента. <span className="text-accent font-semibold">Ваш успех — наш приоритет!</span>
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
+                <div className="flex items-start gap-3">
+                  <Icon name="TrendingUp" size={24} className="text-accent flex-shrink-0 mt-1" />
+                  <span className="text-lg text-muted-foreground">Максимизация доходов</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="BarChart" size={24} className="text-accent flex-shrink-0 mt-1" />
+                  <span className="text-lg text-muted-foreground">Оптимизация расходов</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Eye" size={24} className="text-accent flex-shrink-0 mt-1" />
+                  <span className="text-lg text-muted-foreground">Прозрачность в работе</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Shield" size={24} className="text-accent flex-shrink-0 mt-1" />
+                  <span className="text-lg text-muted-foreground">Снижение рисков</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Users" size={24} className="text-accent flex-shrink-0 mt-1" />
+                  <span className="text-lg text-muted-foreground">Эффективное взаимодействие</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Lightbulb" size={24} className="text-accent flex-shrink-0 mt-1" />
+                  <span className="text-lg text-muted-foreground">Проверенные методы и инновационные решения</span>
+                </div>
+                <div className="flex items-start gap-3 md:col-span-2">
+                  <Icon name="Heart" size={24} className="text-accent flex-shrink-0 mt-1" />
+                  <span className="text-lg text-muted-foreground">Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
+                </div>
+              </div>
+            </Card>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
