@@ -244,92 +244,56 @@ const Index = () => {
       )}
 
       {currentSlide === 2 && (
-        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-auto">
-          <div className="h-full py-16 px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-primary mb-4">Наши услуги</h2>
-              <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Комплексные решения для управления недвижимостью любого типа
-              </p>
+        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-hidden">
+          <div className="h-full py-8 px-12">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold text-primary mb-2">Наши услуги</h2>
+              <div className="w-16 h-1 bg-accent mx-auto" />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-3 gap-4 mb-4">
               {services.map((service, index) => (
-                <Card
-                  key={index}
-                  className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group relative"
-                >
-                  {service.featured && (
-                    <div className="absolute -top-3 right-6 bg-accent text-primary px-4 py-1 rounded-full text-sm font-semibold">
-                      Популярная услуга
+                <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
+                  <div className="flex flex-col items-center text-center gap-2">
+                    <div className="p-2 bg-accent/10 rounded-lg">
+                      <Icon name={service.icon} size={24} className="text-accent" />
                     </div>
-                  )}
-                  <div className="flex items-start gap-4">
-                    <div className={`p-4 rounded-lg transition-colors ${
-                      service.featured ? 'bg-accent/20 group-hover:bg-accent/30' : 'bg-accent/10 group-hover:bg-accent/20'
-                    }`}>
-                      <Icon name={service.icon} size={32} className="text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-3 text-primary">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
+                    <h3 className="text-sm font-semibold text-primary">{service.title}</h3>
                   </div>
                 </Card>
               ))}
             </div>
 
-            <div className="mb-12">
-              <h3 className="text-3xl font-bold text-primary mb-8 text-center">Дополнительные услуги</h3>
-              <div className="grid md:grid-cols-3 gap-6">
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Дополнительные услуги</h3>
+              <div className="grid grid-cols-3 gap-4">
                 {additionalServices.map((service, index) => (
-                  <Card
-                    key={index}
-                    className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-                  >
-                    <div className="flex flex-col items-center text-center gap-4">
-                      <div className="p-4 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
-                        <Icon name={service.icon} size={28} className="text-accent" />
+                  <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col items-center text-center gap-2">
+                      <div className="p-2 bg-accent/10 rounded-lg">
+                        <Icon name={service.icon} size={20} className="text-accent" />
                       </div>
-                      <div>
-                        <h4 className="text-lg font-semibold mb-2 text-primary">
-                          {service.title}
-                        </h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {service.description}
-                        </p>
-                      </div>
+                      <h4 className="text-xs font-semibold text-primary">{service.title}</h4>
                     </div>
                   </Card>
                 ))}
               </div>
             </div>
 
-            <Card className="p-8 bg-gradient-to-r from-primary to-primary/90 text-white">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <Card className="p-4 bg-gradient-to-r from-primary to-primary/90 text-white">
+              <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Нужна консультация?</h3>
-                  <p className="text-lg opacity-90">
-                    Свяжитесь с нами для обсуждения вашего проекта
-                  </p>
+                  <h3 className="text-lg font-bold">Нужна консультация?</h3>
+                  <p className="text-sm opacity-90">Свяжитесь с нами для обсуждения вашего проекта</p>
                 </div>
-                <Button
-                  onClick={() => setCurrentSlide(3)}
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-primary font-semibold"
-                >
+                <Button onClick={() => setCurrentSlide(3)} className="bg-accent hover:bg-accent/90 text-primary font-semibold">
                   Связаться
-                  <Icon name="ArrowRight" size={20} />
+                  <Icon name="ArrowRight" size={16} />
                 </Button>
               </div>
             </Card>
 
-            <div className="flex justify-center gap-4 mt-12">
+            <div className="flex justify-center gap-4 mt-4">
               <Button
                 onClick={() => setCurrentSlide(2)}
                 variant="outline"
@@ -352,17 +316,17 @@ const Index = () => {
       )}
 
       {currentSlide === 3 && (
-        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-auto">
-          <div className="h-full py-16 px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-primary mb-4">Контакты</h2>
-              <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-              <p className="text-xl text-muted-foreground">
+        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-hidden">
+          <div className="h-full py-8 px-12">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-primary mb-2">Контакты</h2>
+              <div className="w-16 h-1 bg-accent mx-auto mb-3" />
+              <p className="text-base text-muted-foreground">
                 Свяжитесь с нами удобным для вас способом
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4 mb-6">
               <Card className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
@@ -420,7 +384,7 @@ const Index = () => {
               </Card>
             </div>
 
-            <div className="flex justify-center gap-4 mt-12">
+            <div className="flex justify-center gap-4 mt-4">
               <Button
                 onClick={() => setCurrentSlide(2)}
                 variant="outline"
