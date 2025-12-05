@@ -382,62 +382,61 @@ const Index = () => {
             </div>
 
             <div className="space-y-6">
-                <Card className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
-                      <Icon name="Phone" size={24} className="text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Телефон</h4>
-                      <p className="text-muted-foreground">+7 (495) 123-45-67</p>
-                      <p className="text-muted-foreground">+7 (800) 555-35-35</p>
-                    </div>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Phone" size={24} className="text-accent" />
                   </div>
-                </Card>
+                  <div>
+                    <h4 className="font-semibold mb-1">Телефон</h4>
+                    <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                    <p className="text-muted-foreground">+7 (800) 555-35-35</p>
+                  </div>
+                </div>
+              </Card>
 
-                <Card className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
-                      <Icon name="Mail" size={24} className="text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Email</h4>
-                      <p className="text-muted-foreground">info@premiumrealty.ru</p>
-                      <p className="text-muted-foreground">sales@premiumrealty.ru</p>
-                    </div>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Mail" size={24} className="text-accent" />
                   </div>
-                </Card>
+                  <div>
+                    <h4 className="font-semibold mb-1">Email</h4>
+                    <p className="text-muted-foreground">info@premiumrealty.ru</p>
+                    <p className="text-muted-foreground">sales@premiumrealty.ru</p>
+                  </div>
+                </div>
+              </Card>
 
-                <Card className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
-                      <Icon name="MapPin" size={24} className="text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Адрес</h4>
-                      <p className="text-muted-foreground">
-                        Москва, ул. Тверская, д. 1<br />
-                        БЦ "Премиум", офис 501
-                      </p>
-                    </div>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="MapPin" size={24} className="text-accent" />
                   </div>
-                </Card>
+                  <div>
+                    <h4 className="font-semibold mb-1">Адрес</h4>
+                    <p className="text-muted-foreground">
+                      Москва, ул. Тверская, д. 1<br />
+                      БЦ "Премиум", офис 501
+                    </p>
+                  </div>
+                </div>
+              </Card>
 
-                <Card className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
-                      <Icon name="Clock" size={24} className="text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Режим работы</h4>
-                      <p className="text-muted-foreground">
-                        Пн-Пт: 9:00 - 19:00<br />
-                        Сб-Вс: 10:00 - 16:00
-                      </p>
-                    </div>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name="Clock" size={24} className="text-accent" />
                   </div>
-                </Card>
-              </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Режим работы</h4>
+                    <p className="text-muted-foreground">
+                      Пн-Пт: 9:00 - 19:00<br />
+                      Сб-Вс: 10:00 - 16:00
+                    </p>
+                  </div>
+                </div>
+              </Card>
             </div>
 
             <div className="flex justify-center gap-4 mt-12">
