@@ -96,7 +96,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
       <div className="fixed top-8 right-8 z-50 flex gap-2">
         {slides.map((slide) => (
           <button
@@ -113,7 +113,7 @@ const Index = () => {
       </div>
 
       {currentSlide === 0 && (
-        <div className="min-h-screen flex items-center justify-center relative overflow-hidden animate-fade-in">
+        <div className="w-[210mm] h-[297mm] bg-white shadow-2xl animate-fade-in relative overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
@@ -123,14 +123,14 @@ const Index = () => {
             <div className="absolute inset-0 bg-black/30" />
           </div>
           
-          <div className="relative z-10 text-center text-white px-4">
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-12">
             <div className="flex items-center justify-center gap-4 mb-8">
               <Icon name="Layers" size={60} className="text-accent" />
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-6xl font-bold leading-tight">
                 Премиум<br />управление
               </h1>
             </div>
-            <p className="text-xl md:text-2xl font-light">
+            <p className="text-2xl font-light">
               Эффективность. Надежность. Результат.
             </p>
           </div>
@@ -138,8 +138,8 @@ const Index = () => {
       )}
 
       {currentSlide === 1 && (
-        <div className="min-h-screen py-20 px-4 animate-fade-in">
-          <div className="max-w-6xl mx-auto">
+        <div className="w-[210mm] h-[297mm] bg-white shadow-2xl animate-fade-in overflow-auto">
+          <div className="h-full py-16 px-12">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-primary mb-6">Наши преимущества</h2>
               <div className="w-24 h-1 bg-accent mx-auto" />
@@ -244,8 +244,8 @@ const Index = () => {
       )}
 
       {currentSlide === 2 && (
-        <div className="min-h-screen py-20 px-4 animate-fade-in">
-          <div className="max-w-6xl mx-auto">
+        <div className="w-[210mm] h-[297mm] bg-white shadow-2xl animate-fade-in overflow-auto">
+          <div className="h-full py-16 px-12">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-primary mb-4">Наши услуги</h2>
               <div className="w-24 h-1 bg-accent mx-auto mb-6" />
@@ -352,8 +352,8 @@ const Index = () => {
       )}
 
       {currentSlide === 3 && (
-        <div className="min-h-screen py-20 px-4 animate-fade-in">
-          <div className="max-w-5xl mx-auto">
+        <div className="w-[210mm] h-[297mm] bg-white shadow-2xl animate-fade-in overflow-auto">
+          <div className="h-full py-16 px-12">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-primary mb-4">Контакты</h2>
               <div className="w-24 h-1 bg-accent mx-auto mb-6" />
