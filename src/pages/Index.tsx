@@ -120,36 +120,19 @@ const Index = () => {
               backgroundImage: 'url(https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/11a0fab9-ba09-4f23-8afc-26bbfb4868ad.jpg)',
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
+            <div className="absolute inset-0 bg-black/30" />
           </div>
           
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <div className="mb-6">
-              <Icon name="Layers" size={80} className="mx-auto mb-6 text-accent" />
+          <div className="relative z-10 text-center text-white px-4">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <Icon name="Layers" size={60} className="text-accent" />
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                Премиум<br />управление
+              </h1>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">
-              REALTY CAPITAL
-            </h1>
-            <p className="text-2xl md:text-3xl mb-8 font-light">
-              Инвестиционное управление коммерческой недвижимостью
+            <p className="text-xl md:text-2xl font-light">
+              Эффективность. Надежность. Результат.
             </p>
-            <div className="flex gap-4 justify-center">
-              <Button
-                onClick={() => setCurrentSlide(1)}
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-primary font-semibold"
-              >
-                Узнать больше
-              </Button>
-              <Button
-                onClick={() => setCurrentSlide(3)}
-                size="lg"
-                variant="outline"
-                className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20"
-              >
-                Связаться с нами
-              </Button>
-            </div>
           </div>
         </div>
       )}
