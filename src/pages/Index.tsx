@@ -1,18 +1,10 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
 
   const slides = [
     { id: 0, title: 'Титульный слайд' },
@@ -102,11 +94,6 @@ const Index = () => {
     { value: '+28%', label: 'Рост стоимости за 3 года' },
     { value: '300+', label: 'Реализованных проектов' }
   ];
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -394,56 +381,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8">
-                <h3 className="text-2xl font-semibold mb-6 text-primary">Напишите нам</h3>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      placeholder="Ваше имя"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="h-12"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="h-12"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="tel"
-                      placeholder="Телефон"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="h-12"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      placeholder="Ваше сообщение"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="min-h-32"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold"
-                  >
-                    Отправить заявку
-                    <Icon name="Send" size={20} />
-                  </Button>
-                </form>
-              </Card>
-
-              <div className="space-y-6">
+            <div className="space-y-6">
                 <Card className="p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-accent/10 rounded-lg">
