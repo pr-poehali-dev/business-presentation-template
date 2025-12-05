@@ -113,46 +113,14 @@ const Index = () => {
       </div>
 
       {currentSlide === 0 && (
-        <div className="min-h-screen flex flex-col relative overflow-hidden animate-fade-in">
+        <div className="min-h-screen flex flex-col justify-end relative overflow-hidden animate-fade-in">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: 'url(https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/11a0fab9-ba09-4f23-8afc-26bbfb4868ad.jpg)',
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-primary/95" />
-          </div>
-          
-          <div className="flex-1 flex items-center justify-center relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <div>
-              <div className="mb-6">
-                <Icon name="Layers" size={80} className="mx-auto mb-6" style={{ color: '#EEBC06' }} />
-              </div>
-              <h1 className="text-6xl md:text-7xl font-bold mb-6">
-                REALTY CAPITAL
-              </h1>
-              <p className="text-2xl md:text-3xl mb-8 font-light">
-                Инвестиционное управление коммерческой недвижимостью
-              </p>
-              <div className="flex gap-4 justify-center">
-                <Button
-                  onClick={() => setCurrentSlide(1)}
-                  size="lg"
-                  className="font-semibold text-primary hover:opacity-90"
-                  style={{ backgroundColor: '#EEBC06' }}
-                >
-                  Узнать больше
-                </Button>
-                <Button
-                  onClick={() => setCurrentSlide(3)}
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20"
-                >
-                  Связаться с нами
-                </Button>
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90" />
           </div>
 
           <div className="relative z-10 pb-12 px-4">
