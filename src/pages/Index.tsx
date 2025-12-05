@@ -275,9 +275,7 @@ const Index = () => {
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className={`p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group relative ${
-                    service.featured ? 'border-2 border-accent shadow-lg' : ''
-                  }`}
+                  className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group relative"
                 >
                   {service.featured && (
                     <div className="absolute -top-3 right-6 bg-accent text-primary px-4 py-1 rounded-full text-sm font-semibold">
