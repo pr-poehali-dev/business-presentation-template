@@ -375,23 +375,33 @@ const Index = () => {
               </Card>
             </div>
 
-            <div className="flex justify-center gap-4 mt-4">
+            <div className="flex flex-col items-center gap-4 mt-6">
               <Button
-                onClick={() => setCurrentSlide(2)}
-                variant="outline"
+                onClick={() => window.location.href = 'mailto:ALL@veterok.local'}
                 size="lg"
+                className="bg-accent hover:bg-accent/90 text-white px-8"
               >
-                <Icon name="ChevronLeft" size={20} />
-                Назад
+                <Icon name="Mail" size={20} />
+                Связаться с нами
               </Button>
-              <Button
-                onClick={() => setCurrentSlide(0)}
-                size="lg"
-                className="bg-primary hover:bg-primary/90"
-              >
-                В начало
-                <Icon name="Home" size={20} />
-              </Button>
+              <div className="flex justify-center gap-4">
+                <Button
+                  onClick={() => setCurrentSlide(2)}
+                  variant="outline"
+                  size="lg"
+                >
+                  <Icon name="ChevronLeft" size={20} />
+                  Назад
+                </Button>
+                <Button
+                  onClick={() => setCurrentSlide(0)}
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90"
+                >
+                  В начало
+                  <Icon name="Home" size={20} />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
