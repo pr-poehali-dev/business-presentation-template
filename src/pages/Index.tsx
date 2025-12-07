@@ -141,14 +141,15 @@ const Index = () => {
           </div>
           
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-12">
-            <div className="bg-black/60 backdrop-blur-sm px-16 py-12 rounded-2xl border-2 border-white/30 shadow-2xl">
-              <div className="flex items-center justify-center gap-6 mb-6">
-                <Icon name="Layers" size={64} className="text-accent" />
-                <h1 className="text-7xl font-bold leading-tight">
+            <div className="bg-black/75 backdrop-blur-md px-20 py-16 rounded-3xl border-4 border-accent shadow-2xl">
+              <div className="flex items-center justify-center gap-8 mb-8">
+                <Icon name="Building2" size={80} className="text-accent drop-shadow-lg" />
+                <h1 className="text-8xl font-bold leading-tight drop-shadow-2xl">
                   Премиум<br />управление
                 </h1>
               </div>
-              <p className="text-3xl font-light tracking-wide">
+              <div className="h-1 w-64 bg-accent mx-auto mb-6" />
+              <p className="text-4xl font-semibold tracking-wide drop-shadow-lg">
                 Эффективность. Надежность. Результат.
               </p>
             </div>
