@@ -72,19 +72,36 @@ const Index = () => {
 
   const additionalServices = [
     {
+      icon: 'DollarSign',
+      title: 'Объем активов под управлением — 100 млн $'
+    },
+    {
       icon: 'Users',
-      title: 'Подготовка и подбор кадров',
-      description: 'Поиск квалифицированных специалистов для эффективного управления'
+      title: '12 миллионов посетителей в год'
     },
     {
-      icon: 'FileText',
-      title: 'Разработка внутренних инструкций и регламентов',
-      description: 'Создание стандартов и процедур для оптимизации работы'
+      icon: 'Building2',
+      title: '20 торговых объектов'
     },
     {
-      icon: 'Workflow',
-      title: 'Выстраивание рабочих процессов и автоматизация управления',
-      description: 'Оптимизация бизнес-процессов с использованием современных технологий'
+      icon: 'Home',
+      title: 'Более 10 объектов в управлении'
+    },
+    {
+      icon: 'Award',
+      title: '20 лет успешного бизнеса'
+    },
+    {
+      icon: 'ShoppingBag',
+      title: '12 лет в ритейле'
+    },
+    {
+      icon: 'TrendingUp',
+      title: '10 лет на рынке'
+    },
+    {
+      icon: 'Users',
+      title: 'Эффективная команда и проверенные эксперты'
     }
   ];
 
@@ -265,15 +282,15 @@ const Index = () => {
             </div>
 
             <div className="mb-4">
-              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Дополнительные услуги</h3>
-              <div className="grid grid-cols-3 gap-4">
+              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Наши достижения</h3>
+              <div className="grid grid-cols-4 gap-3">
                 {additionalServices.map((service, index) => (
-                  <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
-                    <div className="flex flex-col items-center text-center gap-2">
+                  <Card key={index} className="p-3 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col items-center text-center gap-1.5">
                       <div className="p-2 bg-accent/10 rounded-lg">
-                        <Icon name={service.icon} size={20} className="text-accent" />
+                        <Icon name={service.icon} size={18} className="text-accent" />
                       </div>
-                      <h4 className="text-xs font-semibold text-primary">{service.title}</h4>
+                      <h4 className="text-[10px] font-semibold text-primary leading-tight">{service.title}</h4>
                     </div>
                   </Card>
                 ))}
