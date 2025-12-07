@@ -137,20 +137,22 @@ const Index = () => {
               backgroundImage: 'url(https://cdn.poehali.dev/files/image-07-12-25-10-47.jpeg)',
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
           </div>
           
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-12">
-            <div className="bg-black/75 backdrop-blur-md px-20 py-16 rounded-3xl border-4 border-accent shadow-2xl">
-              <div className="flex items-center justify-center gap-8 mb-8">
-                <Icon name="Building2" size={80} className="text-accent drop-shadow-lg" />
-                <h1 className="text-8xl font-bold leading-tight drop-shadow-2xl">
-                  Премиум<br />управление
+            <div className="bg-gradient-to-br from-black/90 to-black/80 backdrop-blur-lg px-24 py-20 rounded-3xl border-4 border-accent/80 shadow-[0_0_60px_rgba(0,0,0,0.8)]">
+              <div className="flex items-center justify-center gap-10 mb-10">
+                <div className="p-4 bg-accent/20 rounded-2xl">
+                  <Icon name="Building2" size={96} className="text-accent drop-shadow-2xl" />
+                </div>
+                <h1 className="text-[7rem] font-black leading-none drop-shadow-2xl tracking-tight" style={{ textShadow: '0 0 40px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8)' }}>
+                  ПРЕМИУМ<br />УПРАВЛЕНИЕ
                 </h1>
               </div>
-              <div className="h-1 w-64 bg-accent mx-auto mb-6" />
-              <p className="text-4xl font-semibold tracking-wide drop-shadow-lg">
-                Эффективность. Надежность. Результат.
+              <div className="h-2 w-80 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-8 rounded-full" />
+              <p className="text-5xl font-bold tracking-widest drop-shadow-2xl uppercase" style={{ textShadow: '0 0 30px rgba(0,0,0,0.9)' }}>
+                Эффективность · Надежность · Результат
               </p>
             </div>
           </div>
