@@ -254,34 +254,34 @@ const Index = () => {
       {currentSlide === 2 && (
         <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-hidden">
           <div className="h-full py-8 px-12">
-            <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-primary mb-2">Наши услуги</h2>
+            <div className="text-center mb-4">
+              <h2 className="text-3xl font-bold text-primary mb-2">Наши достижения</h2>
               <div className="w-16 h-1 bg-accent mx-auto" />
             </div>
 
-            <div className="grid grid-cols-3 gap-4 mb-4">
-              {services.map((service, index) => (
-                <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
-                  <div className="flex flex-col items-center text-center gap-2">
+            <div className="grid grid-cols-4 gap-3 mb-6">
+              {additionalServices.map((service, index) => (
+                <Card key={index} className="p-3 hover:shadow-lg transition-shadow">
+                  <div className="flex flex-col items-center text-center gap-1.5">
                     <div className="p-2 bg-accent/10 rounded-lg">
-                      <Icon name={service.icon} size={24} className="text-accent" />
+                      <Icon name={service.icon} size={18} className="text-accent" />
                     </div>
-                    <h3 className="text-sm font-semibold text-primary">{service.title}</h3>
+                    <h4 className="text-[10px] font-semibold text-primary leading-tight">{service.title}</h4>
                   </div>
                 </Card>
               ))}
             </div>
 
             <div className="mb-4">
-              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Наши достижения</h3>
-              <div className="grid grid-cols-4 gap-3">
-                {additionalServices.map((service, index) => (
-                  <Card key={index} className="p-3 hover:shadow-lg transition-shadow">
-                    <div className="flex flex-col items-center text-center gap-1.5">
+              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Наши услуги</h3>
+              <div className="grid grid-cols-3 gap-4">
+                {services.map((service, index) => (
+                  <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col items-center text-center gap-2">
                       <div className="p-2 bg-accent/10 rounded-lg">
-                        <Icon name={service.icon} size={18} className="text-accent" />
+                        <Icon name={service.icon} size={24} className="text-accent" />
                       </div>
-                      <h4 className="text-[10px] font-semibold text-primary leading-tight">{service.title}</h4>
+                      <h3 className="text-sm font-semibold text-primary">{service.title}</h3>
                     </div>
                   </Card>
                 ))}
