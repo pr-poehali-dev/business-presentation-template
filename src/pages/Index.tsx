@@ -134,22 +134,24 @@ const Index = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://cdn.poehali.dev/files/53a18e1f-c33e-4374-9b08-e47a2c218145.jpg)',
+              backgroundImage: 'url(https://cdn.poehali.dev/files/image-07-12-25-10-47.jpeg)',
             }}
           >
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
           </div>
           
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-12">
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <Icon name="Layers" size={60} className="text-accent" />
-              <h1 className="text-6xl font-bold leading-tight">
-                Премиум<br />управление
-              </h1>
+            <div className="bg-black/60 backdrop-blur-sm px-16 py-12 rounded-2xl border-2 border-white/30 shadow-2xl">
+              <div className="flex items-center justify-center gap-6 mb-6">
+                <Icon name="Layers" size={64} className="text-accent" />
+                <h1 className="text-7xl font-bold leading-tight">
+                  Премиум<br />управление
+                </h1>
+              </div>
+              <p className="text-3xl font-light tracking-wide">
+                Эффективность. Надежность. Результат.
+              </p>
             </div>
-            <p className="text-2xl font-light">
-              Эффективность. Надежность. Результат.
-            </p>
           </div>
         </div>
       )}
