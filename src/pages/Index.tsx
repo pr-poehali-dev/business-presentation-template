@@ -224,18 +224,9 @@ const Index = () => {
                   <div className="p-3 bg-accent/10 rounded-lg">
                     <Icon name="Heart" size={28} className="text-accent" />
                   </div>
-                  <span className="text-lg font-semibold text-primary">Полная свобода и отсутствие беспокойства</span>
+                  <span className="text-lg font-semibold text-primary">Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
                 </div>
               </div>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <div className="text-4xl font-bold text-accent mb-2">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </Card>
-              ))}
             </div>
 
             <div className="flex justify-center gap-4 mt-12">
