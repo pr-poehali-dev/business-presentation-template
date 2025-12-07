@@ -288,20 +288,7 @@ const Index = () => {
               </div>
             </div>
 
-            <Card className="p-4 bg-gradient-to-r from-primary to-primary/90 text-white">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-lg font-bold">Нужна консультация?</h3>
-                  <p className="text-sm opacity-90">Свяжитесь с нами для обсуждения вашего проекта</p>
-                </div>
-                <Button onClick={() => setCurrentSlide(3)} className="bg-accent hover:bg-accent/90 text-primary font-semibold">
-                  Связаться
-                  <Icon name="ArrowRight" size={16} />
-                </Button>
-              </div>
-            </Card>
-
-            <div className="flex justify-center gap-4 mt-4">
+            <div className="flex justify-center gap-4 mt-6">
               <Button
                 onClick={() => setCurrentSlide(2)}
                 variant="outline"
@@ -375,16 +362,7 @@ const Index = () => {
               </Card>
             </div>
 
-            <div className="flex flex-col items-center gap-4 mt-6">
-              <Button
-                onClick={() => window.location.href = 'mailto:ALL@veterok.local'}
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-white px-8"
-              >
-                <Icon name="Mail" size={20} />
-                Связаться с нами
-              </Button>
-              <div className="flex justify-center gap-4">
+            <div className="flex justify-center gap-4 mt-6">
                 <Button
                   onClick={() => setCurrentSlide(2)}
                   variant="outline"
@@ -401,7 +379,6 @@ const Index = () => {
                   В начало
                   <Icon name="Home" size={20} />
                 </Button>
-              </div>
             </div>
           </div>
         </div>
