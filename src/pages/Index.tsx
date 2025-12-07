@@ -140,36 +140,20 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
           </div>
           
-          <div className="relative z-10 h-full flex items-center px-20">
-            <div className="w-full grid grid-cols-2 gap-12 items-center">
-              <div className="bg-white/95 backdrop-blur-sm px-12 py-16 rounded-2xl shadow-2xl border-l-8 border-accent">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 bg-accent rounded-xl">
-                    <Icon name="Building2" size={48} className="text-white" />
-                  </div>
-                  <h1 className="text-6xl font-black text-primary leading-tight">
-                    ПРЕМИУМ<br />УПРАВЛЕНИЕ
-                  </h1>
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-12">
+            <div className="bg-gradient-to-br from-black/90 to-black/80 backdrop-blur-lg px-16 py-12 rounded-3xl border-4 border-accent/80 shadow-[0_0_60px_rgba(0,0,0,0.8)]">
+              <div className="flex items-center justify-center gap-6 mb-6">
+                <div className="p-3 bg-accent/20 rounded-2xl">
+                  <Icon name="Building2" size={64} className="text-accent drop-shadow-2xl" />
                 </div>
-                <div className="h-1 w-48 bg-accent mb-6" />
-                <p className="text-2xl font-semibold text-muted-foreground">
-                  Эффективность<br />
-                  Надежность<br />
-                  Результат
-                </p>
+                <h1 className="text-6xl font-black leading-none drop-shadow-2xl tracking-tight" style={{ textShadow: '0 0 40px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8)' }}>
+                  ПРЕМИУМ<br />УПРАВЛЕНИЕ
+                </h1>
               </div>
-              
-              <div className="space-y-4">
-                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                  <p className="text-lg font-semibold text-primary">20+ объектов под управлением</p>
-                </div>
-                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                  <p className="text-lg font-semibold text-primary">12 млн посетителей в год</p>
-                </div>
-                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                  <p className="text-lg font-semibold text-primary">100 млн $ активов</p>
-                </div>
-              </div>
+              <div className="h-1 w-64 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6 rounded-full" />
+              <p className="text-2xl font-bold tracking-wide drop-shadow-2xl uppercase" style={{ textShadow: '0 0 30px rgba(0,0,0,0.9)' }}>
+                Эффективность · Надежность · Результат
+              </p>
             </div>
           </div>
         </div>
