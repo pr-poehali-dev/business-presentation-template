@@ -328,10 +328,7 @@ const Index = () => {
           <div className="h-full py-8 px-12">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-primary mb-2">Контакты</h2>
-              <div className="w-16 h-1 bg-accent mx-auto mb-3" />
-              <p className="text-base text-muted-foreground">
-                Свяжитесь с нами удобным для вас способом
-              </p>
+              <div className="w-16 h-1 bg-accent mx-auto" />
             </div>
 
             <div className="grid grid-cols-3 gap-6 mb-6 max-w-4xl mx-auto">
