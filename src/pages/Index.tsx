@@ -1,395 +1,304 @@
-import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    { id: 0, title: 'Титульный слайд' },
-    { id: 1, title: 'О компании' },
-    { id: 2, title: 'Услуги' },
-    { id: 3, title: 'Контакты' }
-  ];
-
   const services = [
     {
       icon: 'Handshake',
       title: 'Брокеридж и поиск новых клиентов',
-      description: 'Профессиональный поиск и привлечение арендаторов для максимальной загрузки объектов',
-      featured: true
+      description: 'Профессиональный поиск и привлечение арендаторов для максимальной загрузки объектов'
     },
     {
       icon: 'Settings',
       title: 'Операционное управление',
-      description: 'Ежедневное управление объектами, контроль за выполнением договорных обязательств и обеспечение бесперебойной работы',
-      featured: true
+      description: 'Ежедневное управление объектами, контроль за выполнением договорных обязательств и обеспечение бесперебойной работы'
     },
     {
       icon: 'Wrench',
       title: 'Техническое сопровождение',
-      description: 'Техническое обслуживание и ремонт, профилактика и модернизация инженерных систем',
-      featured: false
+      description: 'Техническое обслуживание и ремонт, профилактика и модернизация инженерных систем'
     },
     {
       icon: 'PieChart',
       title: 'Финансовое планирование и отчетность',
-      description: 'Оптимизация доходов и расходов, разработка бюджета и финансовых стратегий',
-      featured: true
+      description: 'Оптимизация доходов и расходов, разработка бюджета и финансовых стратегий'
     },
     {
       icon: 'TrendingUp',
       title: 'Повышение посещаемости',
-      description: 'Разработка и реализация стратегий для увеличения потока посетителей',
-      featured: false
+      description: 'Разработка и реализация стратегий для увеличения потока посетителей'
     },
     {
       icon: 'Calculator',
       title: 'Бухгалтерское и налоговое сопровождение',
-      description: 'Ведение финансовой отчетности, контроль затрат и подготовка документов',
-      featured: false
+      description: 'Ведение финансовой отчетности, контроль затрат и подготовка документов'
     },
     {
       icon: 'Scale',
       title: 'Юридическое сопровождение сделок и договоров',
-      description: 'Правовая поддержка всех аспектов управления недвижимостью',
-      featured: false
+      description: 'Правовая поддержка всех аспектов управления недвижимостью'
     },
     {
       icon: 'Shield',
       title: 'Обеспечение безопасности и управление рисками',
-      description: 'Комплексная защита объектов и минимизация потенциальных угроз',
-      featured: false
-    },
-    {
-      icon: 'FileSearch',
-      title: 'Аудит процессов',
-      description: 'Проведение комплексных проверок для повышения эффективности работы объектов и улучшения бизнес-процессов',
-      featured: false
-    }
-  ];
-
-  const additionalServices = [
-    {
-      icon: 'DollarSign',
-      title: 'Объем активов под управлением — 100 млн $'
+      description: 'Комплексная защита объектов и минимизация потенциальных угроз'
     },
     {
       icon: 'Users',
-      title: '12 миллионов посетителей в год'
-    },
-    {
-      icon: 'Building2',
-      title: '20 торговых объектов'
-    },
-    {
-      icon: 'Home',
-      title: 'Более 10 объектов в управлении'
-    },
-    {
-      icon: 'Award',
-      title: '20 лет успешного бизнеса'
-    },
-    {
-      icon: 'ShoppingBag',
-      title: '12 лет в ритейле'
-    },
-    {
-      icon: 'TrendingUp',
-      title: '10 лет на рынке'
-    },
-    {
-      icon: 'Users',
-      title: 'Эффективная команда и проверенные эксперты'
+      title: 'Подготовка и подбор кадров',
+      description: 'Профессиональный рекрутинг и обучение персонала для эффективной работы объектов'
     }
   ];
-
-
 
   const stats = [
-    { value: '10 лет', label: 'На рынке' },
-    { value: 'Эффективная команда и', label: 'проверенные эксперты' },
-    { value: 'Более 10 объектов', label: 'в управлении' },
-    { value: 'Объем активов под', label: 'управлением 100млн. $' }
+    { icon: 'DollarSign', value: '100 млн $', label: 'Объем активов под управлением' },
+    { icon: 'Users', value: '12 млн', label: 'Посетителей в год' },
+    { icon: 'Building2', value: '20+', label: 'Торговых объектов' },
+    { icon: 'Award', value: '10 лет', label: 'На рынке' }
   ];
 
-  return (
-    <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
-      <div className="fixed top-8 right-8 z-50 flex gap-2">
-        {slides.map((slide) => (
-          <button
-            key={slide.id}
-            onClick={() => setCurrentSlide(slide.id)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentSlide === slide.id
-                ? 'bg-accent w-8'
-                : 'bg-slate-300 hover:bg-slate-400'
-            }`}
-            aria-label={`Слайд ${slide.id + 1}`}
-          />
-        ))}
-      </div>
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-      {currentSlide === 0 && (
-        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in relative overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: 'url(https://cdn.poehali.dev/files/image-07-12-25-10-47.jpeg)',
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-          </div>
-          
-          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-12">
-            <div className="bg-gradient-to-br from-black/90 to-black/80 backdrop-blur-lg px-16 py-12 rounded-3xl border-4 border-accent/80 shadow-[0_0_60px_rgba(0,0,0,0.8)]">
-              <div className="flex items-center justify-center gap-6 mb-6">
-                <div className="p-3 bg-accent/20 rounded-2xl">
-                  <Icon name="Building2" size={64} className="text-accent drop-shadow-2xl" />
-                </div>
-                <h1 className="text-6xl font-black leading-none drop-shadow-2xl tracking-tight" style={{ textShadow: '0 0 40px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8)' }}>
-                  ПРЕМИУМ<br />УПРАВЛЕНИЕ
-                </h1>
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div className="container mx-auto px-6 py-4">
+          <nav className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-accent rounded-lg">
+                <Icon name="Building2" size={32} className="text-white" />
               </div>
-              <div className="h-1 w-64 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6 rounded-full" />
-              <p className="text-2xl font-bold tracking-wide drop-shadow-2xl uppercase" style={{ textShadow: '0 0 30px rgba(0,0,0,0.9)' }}>
-                Эффективность · Надежность · Результат
+              <span className="text-2xl font-black text-primary">ПРЕМИУМ УПРАВЛЕНИЕ</span>
+            </div>
+            <div className="flex gap-6">
+              <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-accent transition-colors font-semibold">
+                О компании
+              </button>
+              <button onClick={() => scrollToSection('services')} className="text-foreground hover:text-accent transition-colors font-semibold">
+                Услуги
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-accent transition-colors font-semibold">
+                Контакты
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://cdn.poehali.dev/files/image-07-12-25-10-47.jpeg)',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+        </div>
+        
+        <div className="relative z-10 text-center text-white px-6">
+          <div className="bg-gradient-to-br from-black/90 to-black/80 backdrop-blur-lg px-16 py-12 rounded-3xl border-4 border-accent/80 shadow-[0_0_60px_rgba(0,0,0,0.8)]">
+            <div className="flex items-center justify-center gap-6 mb-6">
+              <div className="p-3 bg-accent/20 rounded-2xl">
+                <Icon name="Building2" size={64} className="text-accent drop-shadow-2xl" />
+              </div>
+              <h1 className="text-7xl font-black leading-none drop-shadow-2xl tracking-tight" style={{ textShadow: '0 0 40px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8)' }}>
+                ПРЕМИУМ<br />УПРАВЛЕНИЕ
+              </h1>
+            </div>
+            <div className="h-1 w-64 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6 rounded-full" />
+            <p className="text-3xl font-bold tracking-wide drop-shadow-2xl uppercase" style={{ textShadow: '0 0 30px rgba(0,0,0,0.9)' }}>
+              Эффективность · Надежность · Результат
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={() => scrollToSection('about')}
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white animate-bounce"
+        >
+          <Icon name="ChevronDown" size={48} />
+        </button>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-accent">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center text-white">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-white/20 rounded-full">
+                    <Icon name={stat.icon} size={48} />
+                  </div>
+                </div>
+                <div className="text-4xl font-black mb-2">{stat.value}</div>
+                <div className="text-lg font-semibold opacity-90">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-primary mb-6">О компании</h2>
+            <div className="w-24 h-1 bg-accent mx-auto" />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="bg-slate-50 p-10 rounded-2xl shadow-lg border-l-4 border-accent">
+              <p className="text-xl text-foreground leading-relaxed mb-6">
+                Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
+              </p>
+              <p className="text-xl text-foreground leading-relaxed">
+                Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента.
               </p>
             </div>
-          </div>
-        </div>
-      )}
 
-      {currentSlide === 1 && (
-        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-auto">
-          <div className="h-full py-16 px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold text-primary mb-6">Наши преимущества</h2>
-              <div className="w-24 h-1 bg-accent mx-auto" />
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 mb-12">
-              <div>
-                <div className="bg-white p-10 rounded-lg shadow-lg border-l-4 border-accent h-full flex flex-col justify-center">
-                  <p className="text-lg text-foreground leading-relaxed mb-6">
-                    Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
-                  </p>
-                  <p className="text-lg text-foreground leading-relaxed mb-8">
-                    Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента.
-                  </p>
-                  <div className="p-5 bg-accent/90 rounded-lg">
-                    <p className="text-xl font-bold text-white text-center">Ваш успех — наш приоритет!</p>
-                  </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Icon name="TrendingUp" size={32} className="text-accent" />
                 </div>
+                <span className="text-xl font-semibold text-primary">Максимизация доходов</span>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="TrendingUp" size={28} className="text-accent" />
-                  </div>
-                  <span className="text-lg font-semibold text-primary">Максимизация доходов</span>
+              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Icon name="BarChart" size={32} className="text-accent" />
                 </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="BarChart" size={28} className="text-accent" />
-                  </div>
-                  <span className="text-lg font-semibold text-primary">Оптимизация расходов</span>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="Eye" size={28} className="text-accent" />
-                  </div>
-                  <span className="text-lg font-semibold text-primary">Прозрачность в работе</span>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="Shield" size={28} className="text-accent" />
-                  </div>
-                  <span className="text-lg font-semibold text-primary">Снижение рисков</span>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="Users" size={28} className="text-accent" />
-                  </div>
-                  <span className="text-lg font-semibold text-primary">Эффективное взаимодействие</span>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="Lightbulb" size={28} className="text-accent" />
-                  </div>
-                  <span className="text-lg font-semibold text-primary">Проверенные методы и инновационные решения</span>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="Heart" size={28} className="text-accent" />
-                  </div>
-                  <span className="text-lg font-semibold text-primary">Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
-                </div>
+                <span className="text-xl font-semibold text-primary">Оптимизация расходов</span>
               </div>
-            </div>
 
-            <div className="flex justify-center gap-4 mt-12">
-              <Button
-                onClick={() => setCurrentSlide(0)}
-                variant="outline"
-                size="lg"
-              >
-                <Icon name="ChevronLeft" size={20} />
-                Назад
-              </Button>
-              <Button
-                onClick={() => setCurrentSlide(2)}
-                size="lg"
-                className="bg-primary hover:bg-primary/90"
-              >
-                Далее
-                <Icon name="ChevronRight" size={20} />
-              </Button>
+              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Icon name="Eye" size={32} className="text-accent" />
+                </div>
+                <span className="text-xl font-semibold text-primary">Прозрачность в работе</span>
+              </div>
+
+              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Icon name="Target" size={32} className="text-accent" />
+                </div>
+                <span className="text-xl font-semibold text-primary">Индивидуальный подход</span>
+              </div>
+
+              <div className="p-6 bg-accent rounded-xl shadow-lg mt-8">
+                <p className="text-2xl font-bold text-white text-center">Ваш успех — наш приоритет!</p>
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </section>
 
-      {currentSlide === 2 && (
-        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-hidden">
-          <div className="h-full py-8 px-12">
-            <div className="text-center mb-4">
-              <h2 className="text-3xl font-bold text-primary mb-2">Наши достижения</h2>
-              <div className="w-16 h-1 bg-accent mx-auto" />
-            </div>
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-slate-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-primary mb-6">Наши услуги</h2>
+            <div className="w-24 h-1 bg-accent mx-auto" />
+          </div>
 
-            <div className="grid grid-cols-4 gap-3 mb-6">
-              {additionalServices.map((service, index) => (
-                <Card key={index} className="p-3 hover:shadow-lg transition-shadow">
-                  <div className="flex flex-col items-center text-center gap-1.5">
-                    <div className="p-2 bg-accent/10 rounded-lg">
-                      <Icon name={service.icon} size={18} className="text-accent" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {services.map((service, index) => (
+              <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-accent/10 rounded-lg">
+                      <Icon name={service.icon} size={32} className="text-accent" />
                     </div>
-                    <h4 className="text-[10px] font-semibold text-primary leading-tight">{service.title}</h4>
+                    <h3 className="text-lg font-bold text-primary leading-tight">{service.title}</h3>
                   </div>
-                </Card>
-              ))}
-            </div>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="mb-4">
-              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Наши услуги</h3>
-              <div className="grid grid-cols-3 gap-4">
-                {services.map((service, index) => (
-                  <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
-                    <div className="flex flex-col items-center text-center gap-2">
-                      <div className="p-2 bg-accent/10 rounded-lg">
-                        <Icon name={service.icon} size={24} className="text-accent" />
-                      </div>
-                      <h3 className="text-sm font-semibold text-primary">{service.title}</h3>
-                    </div>
-                  </Card>
-                ))}
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-primary mb-6">Контакты</h2>
+            <div className="w-24 h-1 bg-accent mx-auto" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="p-8 hover:shadow-xl transition-shadow">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="p-4 bg-accent/10 rounded-full">
+                  <Icon name="MapPin" size={32} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-xl mb-2">Адрес</h4>
+                  <p className="text-muted-foreground">
+                    Москва, Вернадского проспект, д. 6<br />
+                    БЦ "Капитолий"
+                  </p>
+                </div>
               </div>
-            </div>
+            </Card>
 
-            <div className="flex justify-center gap-4 mt-6">
-              <Button
-                onClick={() => setCurrentSlide(2)}
-                variant="outline"
-                size="lg"
-              >
-                <Icon name="ChevronLeft" size={20} />
-                Назад
-              </Button>
-              <Button
-                onClick={() => setCurrentSlide(3)}
-                size="lg"
-                className="bg-primary hover:bg-primary/90"
-              >
-                Далее
-                <Icon name="ChevronRight" size={20} />
-              </Button>
-            </div>
+            <Card className="p-8 hover:shadow-xl transition-shadow">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="p-4 bg-accent/10 rounded-full">
+                  <Icon name="Clock" size={32} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-xl mb-2">Режим работы</h4>
+                  <p className="text-muted-foreground">
+                    Пн-Пт: 9:00 - 18:00<br />
+                    Сб-Вс: выходной
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 hover:shadow-xl transition-shadow">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="p-4 bg-accent/10 rounded-full">
+                  <Icon name="Mail" size={32} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-xl mb-2">Email</h4>
+                  <p className="text-muted-foreground">ALL@veterok.local</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="text-center mt-16">
+            <Button size="lg" className="text-lg px-8 py-6">
+              <Icon name="Phone" size={24} className="mr-2" />
+              Связаться с нами
+            </Button>
           </div>
         </div>
-      )}
+      </section>
 
-      {currentSlide === 3 && (
-        <div className="w-[297mm] h-[210mm] bg-white shadow-2xl animate-fade-in overflow-hidden">
-          <div className="h-full py-8 px-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-primary mb-2">Контакты</h2>
-              <div className="w-16 h-1 bg-accent mx-auto" />
+      {/* Footer */}
+      <footer className="bg-primary text-white py-12">
+        <div className="container mx-auto px-6 text-center">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="p-2 bg-accent rounded-lg">
+              <Icon name="Building2" size={32} />
             </div>
-
-            <div className="grid grid-cols-3 gap-6 mb-6 max-w-4xl mx-auto">
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="MapPin" size={24} className="text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Адрес</h4>
-                    <p className="text-muted-foreground">
-                      Москва, Вернадского проспект, д. 6<br />
-                      БЦ "Капитолий"
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="Clock" size={24} className="text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Режим работы</h4>
-                    <p className="text-muted-foreground">
-                      Пн-Пт: 9:00 - 18:00<br />
-                      Сб-Вс: выходной
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name="Mail" size={24} className="text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-muted-foreground">ALL@veterok.local</p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-
-            <div className="flex justify-center gap-4 mt-6">
-                <Button
-                  onClick={() => setCurrentSlide(2)}
-                  variant="outline"
-                  size="lg"
-                >
-                  <Icon name="ChevronLeft" size={20} />
-                  Назад
-                </Button>
-                <Button
-                  onClick={() => setCurrentSlide(0)}
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  В начало
-                  <Icon name="Home" size={20} />
-                </Button>
-            </div>
+            <span className="text-2xl font-black">ПРЕМИУМ УПРАВЛЕНИЕ</span>
           </div>
+          <p className="text-lg opacity-90">Эффективность · Надежность · Результат</p>
+          <p className="text-sm opacity-75 mt-6">© 2024 Премиум Управление. Все права защищены.</p>
         </div>
-      )}
+      </footer>
     </div>
   );
 };
