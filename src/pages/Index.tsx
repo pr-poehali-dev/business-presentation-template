@@ -51,11 +51,37 @@ const Index = () => {
     }
   ];
 
+  const additionalServices = [
+    {
+      icon: 'FileSearch',
+      title: 'Аудит процессов',
+      description: 'Проведение комплексных проверок для повышения эффективности работы объектов и улучшения бизнес-процессов'
+    },
+    {
+      icon: 'FileText',
+      title: 'Разработка внутренних инструкций и регламентов',
+      description: 'Создание документации и стандартов работы для оптимизации бизнес-процессов'
+    },
+    {
+      icon: 'Workflow',
+      title: 'Выстраивание рабочих процессов и автоматизация управления',
+      description: 'Оптимизация операционной деятельности и внедрение современных систем управления'
+    }
+  ];
+
   const stats = [
     { icon: 'DollarSign', value: '100 млн $', label: 'Объем активов под управлением' },
     { icon: 'Users', value: '12 млн', label: 'Посетителей в год' },
     { icon: 'Building2', value: '20+', label: 'Торговых объектов' },
     { icon: 'Award', value: '10 лет', label: 'На рынке' }
+  ];
+
+  const achievements = [
+    { icon: 'Home', title: 'Более 10 объектов в управлении' },
+    { icon: 'Award', title: '20 лет успешного бизнеса' },
+    { icon: 'ShoppingBag', title: '12 лет в ритейле' },
+    { icon: 'TrendingUp', title: '10 лет на рынке' },
+    { icon: 'Users', title: 'Эффективная команда и проверенные эксперты' }
   ];
 
   const scrollToSection = (id: string) => {
@@ -199,16 +225,55 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Achievements Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            {achievements.map((achievement, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Icon name={achievement.icon} size={28} className="text-accent" />
+                  </div>
+                  <h4 className="text-sm font-semibold text-primary leading-tight">{achievement.title}</h4>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-primary mb-6">Наши услуги</h2>
+            <h2 className="text-5xl font-bold text-primary mb-6">Основные услуги</h2>
             <div className="w-24 h-1 bg-accent mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-20">
             {services.map((service, index) => (
+              <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-accent/10 rounded-lg">
+                      <Icon name={service.icon} size={32} className="text-accent" />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary leading-tight">{service.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-primary mb-6">Дополнительные услуги</h3>
+            <div className="w-20 h-1 bg-accent mx-auto" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {additionalServices.map((service, index) => (
               <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-4">
