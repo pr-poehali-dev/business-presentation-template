@@ -30,7 +30,7 @@ const Index = () => {
       icon: 'Wrench',
       title: 'Техническое сопровождение',
       description: 'Техническое обслуживание и ремонт, профилактика и модернизация инженерных систем',
-      featured: true
+      featured: false
     },
     {
       icon: 'PieChart',
@@ -42,49 +42,66 @@ const Index = () => {
       icon: 'TrendingUp',
       title: 'Повышение посещаемости',
       description: 'Разработка и реализация стратегий для увеличения потока посетителей',
-      featured: true
+      featured: false
     },
     {
       icon: 'Calculator',
       title: 'Бухгалтерское и налоговое сопровождение',
       description: 'Ведение финансовой отчетности, контроль затрат и подготовка документов',
-      featured: true
+      featured: false
     },
     {
       icon: 'Scale',
       title: 'Юридическое сопровождение сделок и договоров',
       description: 'Правовая поддержка всех аспектов управления недвижимостью',
-      featured: true
+      featured: false
     },
     {
       icon: 'Shield',
       title: 'Обеспечение безопасности и управление рисками',
       description: 'Комплексная защита объектов и минимизация потенциальных угроз',
-      featured: true
+      featured: false
     },
     {
-      icon: 'Users',
-      title: 'Подготовка и подбор кадров',
-      description: 'Профессиональный рекрутинг и обучение персонала для эффективной работы объектов',
-      featured: true
+      icon: 'FileSearch',
+      title: 'Аудит процессов',
+      description: 'Проведение комплексных проверок для повышения эффективности работы объектов и улучшения бизнес-процессов',
+      featured: false
     }
   ];
 
   const additionalServices = [
     {
-      icon: 'FileSearch',
-      title: 'Аудит процессов',
-      description: 'Проведение комплексных проверок для повышения эффективности работы объектов и улучшения бизнес-процессов'
+      icon: 'DollarSign',
+      title: 'Объем активов под управлением — 100 млн $'
     },
     {
-      icon: 'FileText',
-      title: 'Разработка внутренних инструкций и регламентов',
-      description: 'Создание документации и стандартов работы для оптимизации бизнес-процессов'
+      icon: 'Users',
+      title: '12 миллионов посетителей в год'
     },
     {
-      icon: 'Workflow',
-      title: 'Выстраивание рабочих процессов и автоматизация управления',
-      description: 'Оптимизация операционной деятельности и внедрение современных систем управления'
+      icon: 'Building2',
+      title: '20 торговых объектов'
+    },
+    {
+      icon: 'Home',
+      title: 'Более 10 объектов в управлении'
+    },
+    {
+      icon: 'Award',
+      title: '20 лет успешного бизнеса'
+    },
+    {
+      icon: 'ShoppingBag',
+      title: '12 лет в ритейле'
+    },
+    {
+      icon: 'TrendingUp',
+      title: '10 лет на рынке'
+    },
+    {
+      icon: 'Users',
+      title: 'Эффективная команда и проверенные эксперты'
     }
   ];
 
@@ -249,38 +266,29 @@ const Index = () => {
               <div className="w-16 h-1 bg-accent mx-auto" />
             </div>
 
-            <div className="mb-6">
-              <h3 className="text-3xl font-bold text-primary mb-4 text-center">Основные услуги</h3>
-              <div className="grid grid-cols-3 gap-4">
-                {services.map((service, index) => (
-                  <Card key={index} className="p-5 hover:shadow-lg transition-shadow">
-                    <div className="flex flex-col gap-3">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-accent/10 rounded-lg">
-                          <Icon name={service.icon} size={24} className="text-accent" />
-                        </div>
-                        <h3 className="text-sm font-bold text-primary leading-tight">{service.title}</h3>
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{service.description}</p>
+            <div className="grid grid-cols-4 gap-3 mb-6">
+              {additionalServices.map((service, index) => (
+                <Card key={index} className="p-3 hover:shadow-lg transition-shadow">
+                  <div className="flex flex-col items-center text-center gap-1.5">
+                    <div className="p-2 bg-accent/10 rounded-lg">
+                      <Icon name={service.icon} size={18} className="text-accent" />
                     </div>
-                  </Card>
-                ))}
-              </div>
+                    <h4 className="text-[10px] font-semibold text-primary leading-tight">{service.title}</h4>
+                  </div>
+                </Card>
+              ))}
             </div>
 
             <div className="mb-4">
-              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Дополнительные услуги</h3>
+              <h3 className="text-2xl font-bold text-primary mb-3 text-center">Наши услуги</h3>
               <div className="grid grid-cols-3 gap-4">
-                {additionalServices.map((service, index) => (
-                  <Card key={index} className="p-5 hover:shadow-lg transition-shadow">
-                    <div className="flex flex-col gap-3">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-accent/10 rounded-lg">
-                          <Icon name={service.icon} size={24} className="text-accent" />
-                        </div>
-                        <h3 className="text-sm font-bold text-primary leading-tight">{service.title}</h3>
+                {services.map((service, index) => (
+                  <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col items-center text-center gap-2">
+                      <div className="p-2 bg-accent/10 rounded-lg">
+                        <Icon name={service.icon} size={24} className="text-accent" />
                       </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{service.description}</p>
+                      <h3 className="text-sm font-semibold text-primary">{service.title}</h3>
                     </div>
                   </Card>
                 ))}
