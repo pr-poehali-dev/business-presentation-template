@@ -9,7 +9,7 @@ const PropertyTypesVariants = () => {
     {
       id: 1,
       title: 'Торговая',
-      description: 'Торговые центры, магазины, ритейл',
+      description: 'Торговые центры, магазины, рынки, ритейл',
       image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/19fad273-85b5-4e31-b6ee-b97f86f3d238.jpg',
       icon: 'ShoppingBag'
     },
