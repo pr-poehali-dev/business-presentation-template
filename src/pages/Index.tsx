@@ -91,23 +91,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
-        <div className="container mx-auto px-6 py-4">
+      <header className="fixed top-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-accent/20 z-50">
+        <div className="container mx-auto px-6 py-3">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-accent rounded-lg">
-                <Icon name="Building2" size={32} className="text-white" />
+              <div className="p-1.5 bg-accent/90 rounded">
+                <Icon name="Building2" size={24} className="text-white" />
               </div>
-              <span className="text-2xl font-black text-primary">ПРЕМИУМ УПРАВЛЕНИЕ</span>
+              <span className="text-xl font-bold text-white tracking-wide">ПРЕМИУМ УПРАВЛЕНИЕ</span>
             </div>
-            <div className="flex gap-6">
-              <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-accent transition-colors font-semibold">
+            <div className="flex gap-8">
+              <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-accent transition-colors text-sm font-medium uppercase tracking-wider">
                 О компании
               </button>
-              <button onClick={() => scrollToSection('services')} className="text-foreground hover:text-accent transition-colors font-semibold">
+              <button onClick={() => scrollToSection('services')} className="text-white/80 hover:text-accent transition-colors text-sm font-medium uppercase tracking-wider">
                 Услуги
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-accent transition-colors font-semibold">
+              <button onClick={() => scrollToSection('contact')} className="text-white/80 hover:text-accent transition-colors text-sm font-medium uppercase tracking-wider">
                 Контакты
               </button>
             </div>
@@ -127,17 +127,17 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 text-center text-white px-6">
-          <div className="bg-gradient-to-br from-black/90 to-black/80 backdrop-blur-lg px-16 py-12 rounded-3xl border-4 border-accent/80 shadow-[0_0_60px_rgba(0,0,0,0.8)]">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="p-1.5 bg-accent rounded-md shadow-md">
-                <Icon name="Building2" size={28} className="text-white" />
+          <div className="bg-slate-900/90 backdrop-blur-md px-12 py-8 rounded-xl border border-accent/30 shadow-2xl max-w-3xl mx-auto">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="p-1.5 bg-accent/90 rounded">
+                <Icon name="Building2" size={32} className="text-white" />
               </div>
-              <h1 className="text-7xl font-black leading-none drop-shadow-2xl tracking-tight" style={{ textShadow: '0 0 40px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8)' }}>
+              <h1 className="text-5xl font-bold leading-none tracking-tight">
                 ПРЕМИУМ<br />УПРАВЛЕНИЕ
               </h1>
             </div>
-            <div className="h-1 w-64 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6 rounded-full" />
-            <p className="text-3xl font-bold tracking-wide drop-shadow-2xl uppercase" style={{ textShadow: '0 0 30px rgba(0,0,0,0.9)' }}>
+            <div className="h-px w-48 bg-gradient-to-r from-transparent via-accent/50 to-transparent mx-auto mb-4" />
+            <p className="text-lg font-medium tracking-widest uppercase text-white/90">
               Эффективность · Надежность · Результат
             </p>
           </div>
