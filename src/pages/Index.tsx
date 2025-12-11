@@ -171,71 +171,92 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-white">
+      <section id="about" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-primary mb-6">О компании</h2>
             <div className="w-24 h-1 bg-accent mx-auto" />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-slate-50 p-10 rounded-2xl shadow-lg border-l-4 border-accent">
-              <p className="text-xl text-foreground leading-relaxed mb-6">
-                Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
-              </p>
-              <p className="text-xl text-foreground leading-relaxed">
-                Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента.
-              </p>
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-2xl p-12 mb-12">
+              <div className="grid lg:grid-cols-2 gap-12">
+                <div>
+                  <p className="text-xl text-foreground leading-relaxed">
+                    Мы предоставляем полный комплекс первоклассных услуг в сфере управления недвижимостью, основанных на уникальном опыте многолетней практики, безупречном профессионализме и высокой квалификации нашей команды.
+                  </p>
+                </div>
+                
+                <div>
+                  <p className="text-xl text-foreground leading-relaxed">
+                    Используя передовые технологии и инновационные методы, мы не только превосходим ожидания владельцев и резидентов, но и создаем персонализированные решения, идеально адаптированные к потребностям каждого клиента.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="TrendingUp" size={32} className="text-accent" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Icon name="TrendingUp" size={28} className="text-accent" />
+                  </div>
+                  <span className="text-base font-semibold text-primary">Максимизация доходов</span>
                 </div>
-                <span className="text-xl font-semibold text-primary">Максимизация доходов</span>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="BarChart" size={32} className="text-accent" />
+              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Icon name="BarChart" size={28} className="text-accent" />
+                  </div>
+                  <span className="text-base font-semibold text-primary">Оптимизация расходов</span>
                 </div>
-                <span className="text-xl font-semibold text-primary">Оптимизация расходов</span>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="Eye" size={32} className="text-accent" />
+              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Icon name="Eye" size={28} className="text-accent" />
+                  </div>
+                  <span className="text-base font-semibold text-primary">Прозрачность в работе</span>
                 </div>
-                <span className="text-xl font-semibold text-primary">Прозрачность в работе</span>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="ShieldCheck" size={32} className="text-accent" />
+              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Icon name="ShieldCheck" size={28} className="text-accent" />
+                  </div>
+                  <span className="text-base font-semibold text-primary">Снижение рисков</span>
                 </div>
-                <span className="text-xl font-semibold text-primary">Снижение рисков</span>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="Users" size={32} className="text-accent" />
+              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Icon name="Users" size={28} className="text-accent" />
+                  </div>
+                  <span className="text-base font-semibold text-primary">Эффективное взаимодействие</span>
                 </div>
-                <span className="text-xl font-semibold text-primary">Эффективное взаимодействие</span>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="Lightbulb" size={32} className="text-accent" />
+              <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Icon name="Lightbulb" size={28} className="text-accent" />
+                  </div>
+                  <span className="text-base font-semibold text-primary">Проверенные методы и инновационные решения</span>
                 </div>
-                <span className="text-xl font-semibold text-primary">Проверенные методы и инновационные решения</span>
               </div>
 
-              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="Shield" size={32} className="text-accent" />
+              <div className="md:col-span-2 bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                    <Icon name="Shield" size={28} className="text-accent" />
+                  </div>
+                  <span className="text-base font-semibold text-primary">Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
                 </div>
-                <span className="text-xl font-semibold text-primary">Полная свобода и одновременно отсутствие беспокойства за свой актив</span>
               </div>
             </div>
           </div>
