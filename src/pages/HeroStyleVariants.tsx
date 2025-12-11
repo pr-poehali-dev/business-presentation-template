@@ -8,104 +8,205 @@ const HeroStyleVariants = () => {
   const variants = [
     {
       id: 1,
-      name: 'Праздничная атмосфера',
+      name: 'Классический деловой',
       image: 'https://cdn.poehali.dev/files/IMG_7855.JPG',
-      style: {
-        titleSize: 'text-6xl',
-        titleColor: 'text-white',
-        titleFont: 'font-black',
-        subtitleColor: 'text-amber-200',
-        bgOverlay: 'from-red-900/85 via-orange-800/75 to-amber-900/85',
-        accentColor: 'bg-amber-400',
-        borderStyle: 'border-4 border-red-600/40',
-        shadow: 'shadow-2xl shadow-red-900/50'
-      },
-      description: 'Теплая праздничная палитра с красными и золотыми акцентами'
+      layout: (
+        <div className="max-w-4xl">
+          <div className="text-left space-y-6">
+            <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full">
+              <p className="text-white/90 text-sm font-medium tracking-wider uppercase">
+                Профессиональное управление
+              </p>
+            </div>
+            <h1 className="text-7xl md:text-8xl font-bold text-white leading-none">
+              ПРЕМИУМ<br/>УПРАВЛЕНИЕ
+            </h1>
+            <div className="w-32 h-1 bg-white"></div>
+            <p className="text-2xl text-white/80 font-light max-w-2xl">
+              Эффективные решения для вашего бизнеса.<br/>Надежность. Результат. Доверие.
+            </p>
+          </div>
+        </div>
+      ),
+      overlay: 'bg-gradient-to-r from-slate-900/95 via-slate-800/90 to-transparent'
     },
     {
       id: 2,
-      name: 'Современный минимализм',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/ae768c37-351f-4dd6-ae0a-1a3f02c59d29.jpg',
-      style: {
-        titleSize: 'text-7xl',
-        titleColor: 'text-slate-900',
-        titleFont: 'font-bold',
-        subtitleColor: 'text-slate-700',
-        bgOverlay: 'from-white/95 via-slate-50/90 to-white/95',
-        accentColor: 'bg-blue-600',
-        borderStyle: 'border-l-8 border-blue-600',
-        shadow: 'shadow-xl'
-      },
-      description: 'Чистый современный дизайн со строгими линиями'
+      name: 'Минимализм',
+      image: 'https://cdn.poehali.dev/files/IMG_7855.JPG',
+      layout: (
+        <div className="max-w-3xl text-center">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-4 bg-white px-8 py-6 rounded-2xl shadow-2xl">
+              <Icon name="Store" size={48} className="text-slate-900" />
+              <div className="text-left">
+                <h1 className="text-5xl font-bold text-slate-900 leading-none">
+                  ПРЕМИУМ
+                </h1>
+                <p className="text-xl text-slate-600 font-light tracking-widest">
+                  УПРАВЛЕНИЕ
+                </p>
+              </div>
+            </div>
+            <p className="text-lg text-white font-medium bg-black/40 backdrop-blur-md px-8 py-4 rounded-full inline-block">
+              Эффективность · Надежность · Результат
+            </p>
+          </div>
+        </div>
+      ),
+      overlay: 'bg-black/30'
     },
     {
       id: 3,
-      name: 'Премиум элегантность',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/7290a9fa-e6e2-49b1-9e53-0165fd717ccb.jpg',
-      style: {
-        titleSize: 'text-6xl',
-        titleColor: 'text-amber-50',
-        titleFont: 'font-light italic',
-        subtitleColor: 'text-amber-100/90',
-        bgOverlay: 'from-slate-900/90 via-slate-800/85 to-slate-900/90',
-        accentColor: 'bg-gradient-to-r from-amber-400 to-yellow-500',
-        borderStyle: 'border-2 border-amber-400/50',
-        shadow: 'shadow-2xl shadow-amber-900/30'
-      },
-      description: 'Изысканный стиль с золотыми деталями и тонкими шрифтами'
+      name: 'Журнальный',
+      image: 'https://cdn.poehali.dev/files/IMG_7855.JPG',
+      layout: (
+        <div className="max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6 text-left">
+              <div className="space-y-2">
+                <p className="text-white/60 text-sm tracking-[0.3em] uppercase font-medium">
+                  № 01 / 2024
+                </p>
+                <h1 className="text-6xl font-light text-white leading-tight">
+                  Премиум<br/>
+                  <span className="font-bold italic">Управление</span>
+                </h1>
+              </div>
+              <div className="h-px w-full bg-white/30"></div>
+              <p className="text-lg text-white/90 leading-relaxed">
+                Эффективность каждого решения.<br/>
+                Надежность проверенная временем.<br/>
+                Результат который вы заслуживаете.
+              </p>
+            </div>
+            <div className="hidden md:block">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl">
+                <Icon name="TrendingUp" size={120} className="text-white/80 mx-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      overlay: 'bg-gradient-to-br from-slate-900/90 via-slate-800/85 to-slate-900/90'
     },
     {
       id: 4,
-      name: 'Энергичная динамика',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/ae5fd6f9-e89e-49d3-82b0-f8a4ae36430c.jpg',
-      style: {
-        titleSize: 'text-7xl',
-        titleColor: 'text-white',
-        titleFont: 'font-black tracking-tight',
-        subtitleColor: 'text-lime-200',
-        bgOverlay: 'from-green-900/80 via-emerald-800/70 to-teal-900/80',
-        accentColor: 'bg-lime-400',
-        borderStyle: 'border-4 border-lime-400/60',
-        shadow: 'shadow-2xl shadow-green-900/50'
-      },
-      description: 'Яркие цвета и динамичная типографика'
+      name: 'Современный акцент',
+      image: 'https://cdn.poehali.dev/files/IMG_7855.JPG',
+      layout: (
+        <div className="max-w-4xl text-center">
+          <div className="space-y-8">
+            <div className="inline-block">
+              <div className="bg-gradient-to-r from-amber-400 to-orange-500 p-1 rounded-2xl">
+                <div className="bg-slate-900 px-12 py-8 rounded-2xl">
+                  <h1 className="text-7xl font-black text-white tracking-tight leading-none">
+                    ПРЕМИУМ<br/>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                      УПРАВЛЕНИЕ
+                    </span>
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center gap-8">
+              <div className="text-center">
+                <div className="text-amber-400 text-3xl font-bold">01</div>
+                <div className="text-white text-sm mt-1">Эффективность</div>
+              </div>
+              <div className="text-center">
+                <div className="text-amber-400 text-3xl font-bold">02</div>
+                <div className="text-white text-sm mt-1">Надежность</div>
+              </div>
+              <div className="text-center">
+                <div className="text-amber-400 text-3xl font-bold">03</div>
+                <div className="text-white text-sm mt-1">Результат</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      overlay: 'bg-black/70'
     },
     {
       id: 5,
-      name: 'Традиционный шарм',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/9036925a-8332-4d3e-9186-eb2451f41e45.jpg',
-      style: {
-        titleSize: 'text-6xl',
-        titleColor: 'text-red-50',
-        titleFont: 'font-serif font-bold',
-        subtitleColor: 'text-red-100/80',
-        bgOverlay: 'from-red-950/85 via-rose-900/75 to-red-950/85',
-        accentColor: 'bg-red-500',
-        borderStyle: 'border-8 border-red-700/30 rounded-lg',
-        shadow: 'shadow-2xl shadow-red-950/60'
-      },
-      description: 'Классический дизайн с традиционными элементами'
+      name: 'Элегантный премиум',
+      image: 'https://cdn.poehali.dev/files/IMG_7855.JPG',
+      layout: (
+        <div className="max-w-4xl text-center">
+          <div className="bg-white/5 backdrop-blur-2xl border-2 border-white/20 rounded-3xl p-12 shadow-2xl">
+            <div className="space-y-8">
+              <div className="flex justify-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 flex items-center justify-center shadow-xl">
+                  <Icon name="Crown" size={40} className="text-white" />
+                </div>
+              </div>
+              <div className="space-y-4">
+                <h1 className="text-6xl font-serif font-light text-white leading-tight">
+                  Премиум Управление
+                </h1>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-300 to-transparent"></div>
+                  <Icon name="Sparkles" size={20} className="text-amber-300" />
+                  <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-300 to-transparent"></div>
+                </div>
+                <p className="text-xl text-white/80 font-light italic">
+                  Эффективность · Надежность · Результат
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      overlay: 'bg-gradient-to-b from-slate-900/85 via-slate-800/80 to-slate-900/90'
     },
     {
       id: 6,
-      name: 'Городской стиль',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/127692a1-b9f8-4ed2-89b5-3bf6a2b5c0e4.jpg',
-      style: {
-        titleSize: 'text-7xl',
-        titleColor: 'text-cyan-50',
-        titleFont: 'font-extrabold uppercase',
-        subtitleColor: 'text-cyan-200',
-        bgOverlay: 'from-blue-950/90 via-indigo-900/85 to-blue-950/90',
-        accentColor: 'bg-cyan-400',
-        borderStyle: 'border-b-8 border-cyan-400',
-        shadow: 'shadow-2xl shadow-blue-950/70'
-      },
-      description: 'Урбанистический стиль с контрастными акцентами'
+      name: 'Строгий корпоративный',
+      image: 'https://cdn.poehali.dev/files/IMG_7855.JPG',
+      layout: (
+        <div className="max-w-5xl w-full">
+          <div className="bg-slate-900/95 backdrop-blur-sm border-l-8 border-blue-500 p-12 shadow-2xl">
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-2 space-y-6 text-left">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <p className="text-blue-400 text-sm tracking-wider uppercase font-semibold">
+                    Профессиональные решения
+                  </p>
+                </div>
+                <h1 className="text-6xl font-bold text-white uppercase tracking-tight leading-none">
+                  ПРЕМИУМ<br/>УПРАВЛЕНИЕ
+                </h1>
+                <div className="flex items-center gap-6 text-white/70 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Icon name="CheckCircle2" size={20} className="text-blue-500" />
+                    <span>Эффективность</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="CheckCircle2" size={20} className="text-blue-500" />
+                    <span>Надежность</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="CheckCircle2" size={20} className="text-blue-500" />
+                    <span>Результат</span>
+                  </div>
+                </div>
+              </div>
+              <div className="hidden md:flex justify-end">
+                <div className="w-32 h-32 border-4 border-blue-500 rounded-full flex items-center justify-center">
+                  <Icon name="Building2" size={60} className="text-blue-500" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      overlay: 'bg-gradient-to-br from-slate-950/80 via-blue-950/60 to-slate-950/80'
     }
   ];
 
   const currentVariant = variants.find(v => v.id === activeVariant) || variants[0];
-  const { style } = currentVariant;
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -117,7 +218,7 @@ const HeroStyleVariants = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-primary">Стилистические варианты</h1>
+              <h1 className="text-2xl font-bold text-primary">Варианты стилистики</h1>
               <p className="text-sm text-muted-foreground mt-1">
                 {currentVariant.name}
               </p>
@@ -130,7 +231,7 @@ const HeroStyleVariants = () => {
                   onClick={() => setActiveVariant(variant.id)}
                   size="sm"
                 >
-                  {variant.id}
+                  Вариант {variant.id}
                 </Button>
               ))}
             </div>
@@ -138,39 +239,24 @@ const HeroStyleVariants = () => {
         </div>
       </div>
 
-      <div className="pt-24">
-        <section className="relative h-screen flex items-center justify-center">
+      <div className="pt-20">
+        <section className="relative h-screen flex items-center justify-center p-6">
           <div
             className="absolute inset-0 bg-cover bg-center transition-all duration-700"
             style={{
               backgroundImage: `url(${currentVariant.image})`,
             }}
           >
-            <div className={`absolute inset-0 bg-gradient-to-b ${style.bgOverlay} transition-all duration-700`} />
+            <div className={`absolute inset-0 ${currentVariant.overlay} transition-all duration-700`} />
           </div>
           
-          <div className="relative z-10 text-center px-6 max-w-5xl">
-            <div className={`bg-black/20 backdrop-blur-xl px-16 py-12 ${style.borderStyle} ${style.shadow} transition-all duration-700`}>
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <div className={`p-2 ${style.accentColor} rounded-lg transition-all duration-700`}>
-                  <Icon name="Store" size={40} className="text-white" />
-                </div>
-                <h1 className={`${style.titleSize} ${style.titleColor} ${style.titleFont} leading-tight transition-all duration-700`}>
-                  ПРЕМИУМ<br />УПРАВЛЕНИЕ
-                </h1>
-              </div>
-              
-              <div className={`h-1 w-64 ${style.accentColor} mx-auto mb-6 transition-all duration-700`} />
-              
-              <p className={`text-xl ${style.subtitleColor} font-medium tracking-widest uppercase transition-all duration-700`}>
-                Эффективность · Надежность · Результат
-              </p>
-            </div>
+          <div className="relative z-10 w-full flex items-center justify-center transition-all duration-700">
+            {currentVariant.layout}
           </div>
 
           <button
             onClick={() => scrollToSection('comparison')}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white animate-bounce"
+            className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white animate-bounce hover:scale-110 transition-transform"
           >
             <Icon name="ChevronDown" size={48} />
           </button>
@@ -178,40 +264,47 @@ const HeroStyleVariants = () => {
 
         <div id="comparison" className="bg-gradient-to-b from-slate-50 to-white py-16">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center text-primary mb-12">
-              Сравнение стилей
+            <h2 className="text-4xl font-bold text-center text-primary mb-4">
+              Выберите стиль
             </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Каждый вариант создан с учетом современных дизайн-трендов и представляет разный подход к подаче информации
+            </p>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {variants.map(variant => (
                 <div 
                   key={variant.id}
-                  className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer ${
-                    activeVariant === variant.id ? 'ring-4 ring-primary' : ''
+                  className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer ${
+                    activeVariant === variant.id ? 'ring-4 ring-primary scale-105' : 'hover:scale-102'
                   }`}
                   onClick={() => {
                     setActiveVariant(variant.id);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                 >
-                  <div className="relative h-48">
-                    <img 
-                      src={variant.image} 
-                      alt={variant.name}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 right-4 bg-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-primary shadow-lg">
+                  <div className="relative h-64 overflow-hidden">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center scale-110"
+                      style={{
+                        backgroundImage: `url(${variant.image})`,
+                      }}
+                    >
+                      <div className={`absolute inset-0 ${variant.overlay} flex items-center justify-center p-4`}>
+                        <div className="transform scale-50 origin-center">
+                          {variant.layout}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute top-4 right-4 bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-lg">
                       {variant.id}
                     </div>
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-primary mb-3">
+                    <h3 className="text-xl font-bold text-primary mb-2">
                       {variant.name}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {variant.description}
-                    </p>
                     
                     <Button 
                       className="w-full mt-4"
@@ -222,39 +315,50 @@ const HeroStyleVariants = () => {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                     >
-                      {activeVariant === variant.id ? 'Выбран' : 'Выбрать'}
+                      {activeVariant === variant.id ? (
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={16} />
+                          Выбран
+                        </div>
+                      ) : (
+                        'Посмотреть'
+                      )}
                     </Button>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
 
-        <div className="bg-slate-900 text-white py-16">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">
-                Особенности каждого стиля
-              </h2>
-              
-              <div className="space-y-6">
-                {variants.map(variant => (
-                  <div 
-                    key={variant.id}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-l-4 border-primary hover:bg-slate-800/70 transition-all"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">
-                        {variant.id}
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-2">{variant.name}</h3>
-                        <p className="text-slate-300 leading-relaxed">{variant.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+            <div className="bg-slate-100 rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                <Icon name="Info" size={28} />
+                Описание стилей
+              </h3>
+              <div className="space-y-4 text-muted-foreground">
+                <div className="flex gap-4">
+                  <span className="font-bold text-primary min-w-[80px]">Вариант 1:</span>
+                  <p>Классический деловой стиль с акцентом на профессионализм. Текст выровнен влево, крупный заголовок создает впечатление надежности.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-bold text-primary min-w-[80px]">Вариант 2:</span>
+                  <p>Минималистичный дизайн с белой карточкой в центре. Отлично подходит для современных проектов, где важна чистота и простота.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-bold text-primary min-w-[80px]">Вариант 3:</span>
+                  <p>Журнальный стиль с двухколоночной версткой. Элегантное сочетание легких и жирных шрифтов создает эффект премиум-издания.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-bold text-primary min-w-[80px]">Вариант 4:</span>
+                  <p>Современный акцент с яркими золотыми элементами. Нумерованные преимущества и градиентный текст привлекают внимание.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-bold text-primary min-w-[80px]">Вариант 5:</span>
+                  <p>Элегантный премиум с использованием serif-шрифтов и золотых акцентов. Карточка с размытием создает эффект роскоши.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="font-bold text-primary min-w-[80px]">Вариант 6:</span>
+                  <p>Строгий корпоративный с синими акцентами. Четкая структура с иконками-галочками подчеркивает надежность и системность.</p>
+                </div>
               </div>
             </div>
           </div>
