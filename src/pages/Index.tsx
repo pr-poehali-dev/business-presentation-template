@@ -154,7 +154,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-20 bg-accent">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center text-white">
                 <div className="flex justify-center mb-4">
@@ -164,6 +164,19 @@ const Index = () => {
                 </div>
                 <div className="text-4xl font-black mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold opacity-90">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all hover:-translate-y-1">
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="p-3 bg-white/20 rounded-lg">
+                    <Icon name={achievement.icon} size={24} className="text-white" />
+                  </div>
+                  <span className="text-sm font-semibold text-white leading-tight">{achievement.title}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -263,23 +276,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Achievements Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex flex-col items-center text-center gap-3">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Icon name={achievement.icon} size={28} className="text-accent" />
-                  </div>
-                  <h4 className="text-sm font-semibold text-primary leading-tight">{achievement.title}</h4>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Section */}
       <section id="services" className="py-24 bg-slate-50">
