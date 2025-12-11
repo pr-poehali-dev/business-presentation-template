@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import AboutVariants from "./pages/AboutVariants";
 import HeroVariants from "./pages/HeroVariants";
 import HeroStyleVariants from "./pages/HeroStyleVariants";
+import HeroFinal from "./pages/HeroFinal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/variants" element={<AboutVariants />} />
           <Route path="/hero-variants" element={<HeroVariants />} />
           <Route path="/hero-style-variants" element={<HeroStyleVariants />} />
+          <Route path="/hero-final" element={<HeroFinal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
