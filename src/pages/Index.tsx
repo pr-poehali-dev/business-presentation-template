@@ -153,26 +153,26 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center text-white">
+              <div key={index} className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
                 <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-white/20 rounded-full">
-                    <Icon name={stat.icon} size={48} />
+                  <div className="p-4 bg-accent rounded-full">
+                    <Icon name={stat.icon} size={48} className="text-white" />
                   </div>
                 </div>
-                <div className="text-4xl font-black mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold opacity-90">{stat.label}</div>
+                <div className="text-4xl font-black text-primary mb-2">{stat.value}</div>
+                <div className="text-base font-semibold text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all hover:-translate-y-1">
+              <div key={index} className="bg-white rounded-xl p-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center gap-3">
-                  <div className="p-3 bg-white/20 rounded-lg">
+                  <div className="p-3 bg-accent rounded-lg">
                     <Icon name={achievement.icon} size={24} className="text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-white leading-tight">{achievement.title}</span>
+                  <span className="text-sm font-semibold text-primary leading-tight">{achievement.title}</span>
                 </div>
               </div>
             ))}
