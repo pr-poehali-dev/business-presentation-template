@@ -76,6 +76,37 @@ const Index = () => {
     { icon: 'Award', value: '10 лет', label: 'На рынке' }
   ];
 
+  const propertyTypes = [
+    {
+      id: 1,
+      title: 'Торговая',
+      description: 'Торговые центры, магазины, рынки, ритейл',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/19fad273-85b5-4e31-b6ee-b97f86f3d238.jpg',
+      icon: 'ShoppingBag'
+    },
+    {
+      id: 2,
+      title: 'Складская',
+      description: 'Логистические комплексы, склады',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/bcda70e1-6fcc-4429-a6b8-0f2a69d7dd0a.jpg',
+      icon: 'Package'
+    },
+    {
+      id: 3,
+      title: 'Офисная',
+      description: 'Бизнес-центры, офисные здания',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/09513fdd-5273-45bb-820e-eaa9ec2c49cf.jpg',
+      icon: 'Briefcase'
+    },
+    {
+      id: 4,
+      title: 'Жилая',
+      description: 'Жилые комплексы, апартаменты',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/51feef5d-1c27-4960-90dd-a5e7272382cf.jpg',
+      icon: 'Home'
+    }
+  ];
+
   const achievements = [
     { icon: 'Home', title: 'Более 10 объектов в управлении' },
     { icon: 'Award', title: '20 лет успешного бизнеса' },
@@ -176,6 +207,37 @@ const Index = () => {
                     <Icon name={achievement.icon} size={20} className="text-white" />
                   </div>
                   <span className="text-sm font-semibold text-primary leading-tight">{achievement.title}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Property Types Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Сфера интересов</h2>
+            <p className="text-xl text-white/80">Работаем со всеми типами недвижимости</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {propertyTypes.map((type) => (
+              <div key={type.id} className="relative group">
+                <div className="relative overflow-hidden rounded-2xl h-80">
+                  <img 
+                    src={type.image} 
+                    alt={type.title}
+                    className="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-110 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+                    <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mb-4 shadow-xl">
+                      <Icon name={type.icon} size={36} className="text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">{type.title}</h3>
+                    <p className="text-white/90 text-sm text-center">{type.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
