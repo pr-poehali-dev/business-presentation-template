@@ -127,7 +127,7 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 text-center text-white px-6">
-          <div className="bg-slate-900/90 backdrop-blur-md px-12 py-8 rounded-xl border border-accent/30 shadow-2xl max-w-3xl mx-auto">
+          <div className="backdrop-blur-md rounded-xl border border-accent/30 shadow-2xl max-w-3xl mx-auto py-8 px-8 bg-transparent">
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="p-1.5 bg-accent/90 rounded">
                 <Icon name="Building2" size={32} className="text-white" />
