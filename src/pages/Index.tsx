@@ -151,6 +151,9 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-20 bg-accent border-t-4 border-slate-800/20">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-3">Комплексные решения для управления недвижимостью любого типа</h2>
+          </div>
           <div className="grid grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
