@@ -92,8 +92,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-accent/20 z-50">
-        <div className="container mx-auto px-6 py-3">
-          <nav className="flex items-center justify-between">
+        <div className="container mx-auto px-6 rounded-[0.25rem] py-[11px] bg-transparent">
+          <nav className="flex items-center justify-between bg-slate-800">
             <div className="flex items-center gap-3">
               <div className="p-1.5 bg-accent/90 rounded">
                 <Icon name="Building2" size={24} className="text-white" />
