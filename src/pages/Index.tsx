@@ -95,10 +95,8 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="relative p-3 bg-gradient-to-br from-accent via-accent to-[#c77a2e] rounded-xl shadow-lg">
+              <div className="p-2 bg-accent rounded-lg">
                 <Icon name="Building2" size={32} className="text-white" />
-                <div className="absolute inset-0 bg-white/10 rounded-xl backdrop-blur-sm"></div>
-                <Icon name="Building2" size={32} className="text-white relative z-10" />
               </div>
               <span className="text-2xl font-black text-primary">ПРЕМИУМ УПРАВЛЕНИЕ</span>
             </div>
