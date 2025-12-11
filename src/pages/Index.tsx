@@ -128,9 +128,9 @@ const Index = () => {
         
         <div className="relative z-10 text-center text-white px-6">
           <div className="bg-gradient-to-br from-black/90 to-black/80 backdrop-blur-lg px-16 py-12 rounded-3xl border-4 border-accent/80 shadow-[0_0_60px_rgba(0,0,0,0.8)]">
-            <div className="flex items-center justify-center gap-5 mb-6">
-              <div className="p-2 bg-white/10 backdrop-blur-sm rounded-lg border border-accent/40 shadow-lg">
-                <Icon name="Building2" size={36} className="text-accent" />
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="p-1.5 bg-accent rounded-md shadow-md">
+                <Icon name="Building2" size={28} className="text-white" />
               </div>
               <h1 className="text-7xl font-black leading-none drop-shadow-2xl tracking-tight" style={{ textShadow: '0 0 40px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8)' }}>
                 ПРЕМИУМ<br />УПРАВЛЕНИЕ
