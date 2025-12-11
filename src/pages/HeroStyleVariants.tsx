@@ -13,22 +13,22 @@ const HeroStyleVariants = () => {
       layout: (
         <div className="max-w-4xl">
           <div className="text-left space-y-6">
-            <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full">
-              <p className="text-white/90 text-sm font-medium tracking-wider uppercase">
+            <div className="inline-block px-6 py-2 bg-blue-600/20 backdrop-blur-md border border-blue-400/40 rounded-full">
+              <p className="text-blue-100 text-sm font-medium tracking-wider uppercase">
                 Профессиональное управление
               </p>
             </div>
-            <h1 className="text-7xl md:text-8xl font-bold text-white leading-none">
+            <h1 className="text-7xl md:text-8xl font-bold text-white leading-none drop-shadow-2xl">
               ПРЕМИУМ<br/>УПРАВЛЕНИЕ
             </h1>
-            <div className="w-32 h-1 bg-white"></div>
-            <p className="text-2xl text-white/80 font-light max-w-2xl">
+            <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-cyan-300"></div>
+            <p className="text-2xl text-blue-50 font-light max-w-2xl drop-shadow-lg">
               Эффективные решения для вашего бизнеса.<br/>Надежность. Результат. Доверие.
             </p>
           </div>
         </div>
       ),
-      overlay: 'bg-gradient-to-r from-slate-900/95 via-slate-800/90 to-transparent'
+      overlay: 'bg-gradient-to-r from-blue-950/90 via-slate-900/85 to-transparent backdrop-blur-sm'
     },
     {
       id: 2,
@@ -95,12 +95,12 @@ const HeroStyleVariants = () => {
       name: 'Современный акцент',
       image: 'https://cdn.poehali.dev/files/IMG_7855.JPG',
       layout: (
-        <div className="max-w-4xl text-center">
-          <div className="space-y-8">
+        <div className="max-w-3xl text-center">
+          <div className="space-y-6">
             <div className="inline-block">
-              <div className="bg-gradient-to-r from-amber-400 to-orange-500 p-1 rounded-2xl">
-                <div className="bg-slate-900 px-12 py-8 rounded-2xl">
-                  <h1 className="text-7xl font-black text-white tracking-tight leading-none">
+              <div className="bg-gradient-to-r from-amber-400 to-orange-500 p-1 rounded-xl">
+                <div className="bg-slate-900 px-8 py-5 rounded-xl">
+                  <h1 className="text-5xl font-black text-white tracking-tight leading-none">
                     ПРЕМИУМ<br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
                       УПРАВЛЕНИЕ
@@ -109,18 +109,18 @@ const HeroStyleVariants = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center gap-8">
+            <div className="flex justify-center gap-6">
               <div className="text-center">
-                <div className="text-amber-400 text-3xl font-bold">01</div>
-                <div className="text-white text-sm mt-1">Эффективность</div>
+                <div className="text-amber-400 text-2xl font-bold">01</div>
+                <div className="text-white text-xs mt-1">Эффективность</div>
               </div>
               <div className="text-center">
-                <div className="text-amber-400 text-3xl font-bold">02</div>
-                <div className="text-white text-sm mt-1">Надежность</div>
+                <div className="text-amber-400 text-2xl font-bold">02</div>
+                <div className="text-white text-xs mt-1">Надежность</div>
               </div>
               <div className="text-center">
-                <div className="text-amber-400 text-3xl font-bold">03</div>
-                <div className="text-white text-sm mt-1">Результат</div>
+                <div className="text-amber-400 text-2xl font-bold">03</div>
+                <div className="text-white text-xs mt-1">Результат</div>
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@ const HeroStyleVariants = () => {
       <div className="pt-20">
         <section className="relative h-screen flex items-center justify-center p-6">
           <div
-            className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+            className="absolute inset-0 bg-cover bg-center transition-all duration-700 blur-sm scale-105"
             style={{
               backgroundImage: `url(${currentVariant.image})`,
             }}
