@@ -212,13 +212,27 @@ const Index = () => {
 
               <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
                 <div className="p-3 bg-accent/10 rounded-lg">
-                  <Icon name="Target" size={32} className="text-accent" />
+                  <Icon name="ShieldCheck" size={32} className="text-accent" />
                 </div>
-                <span className="text-xl font-semibold text-primary">Индивидуальный подход</span>
+                <span className="text-xl font-semibold text-primary">Снижение рисков</span>
+              </div>
+
+              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Icon name="Users" size={32} className="text-accent" />
+                </div>
+                <span className="text-xl font-semibold text-primary">Эффективное взаимодействие</span>
+              </div>
+
+              <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-xl shadow hover:shadow-lg transition-shadow">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Icon name="Lightbulb" size={32} className="text-accent" />
+                </div>
+                <span className="text-xl font-semibold text-primary">Проверенные методы и инновационные решения</span>
               </div>
 
               <div className="p-6 bg-accent rounded-xl shadow-lg mt-8">
-                <p className="text-2xl font-bold text-white text-center">Спокойство за ваш актив</p>
+                <p className="text-xl font-bold text-white text-center leading-relaxed">Полная свобода и одновременно отсутствие беспокойства за свой актив</p>
               </div>
             </div>
           </div>
