@@ -116,36 +116,33 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center p-6">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center blur-sm scale-105"
           style={{
-            backgroundImage: 'url(https://cdn.poehali.dev/files/image-07-12-25-10-47.jpeg)',
+            backgroundImage: 'url(https://cdn.poehali.dev/files/IMG_7855.JPG)',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/85 to-transparent backdrop-blur-sm" />
         </div>
         
-        <div className="relative z-10 text-center text-white px-6">
-          <div className="backdrop-blur-md rounded-xl border border-accent/30 shadow-2xl max-w-3xl mx-auto py-8 px-8 bg-transparent">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="p-1.5 bg-accent/90 rounded">
-                <Icon name="Building2" size={32} className="text-white" />
-              </div>
-              <h1 className="text-5xl font-bold leading-none tracking-tight">
-                ПРЕМИУМ<br />УПРАВЛЕНИЕ
+        <div className="relative z-10 w-full flex items-center justify-center">
+          <div className="max-w-4xl">
+            <div className="text-left space-y-6">
+              <h1 className="text-7xl md:text-8xl font-bold text-white leading-none drop-shadow-2xl">
+                ПРЕМИУМ<br/>УПРАВЛЕНИЕ
               </h1>
+              <div className="w-32 h-1 bg-gradient-to-r from-accent to-amber-300"></div>
+              <p className="text-2xl text-amber-50 font-light max-w-2xl drop-shadow-lg">
+                Эффективность · Надежность · Результат
+              </p>
             </div>
-            <div className="h-px w-48 bg-gradient-to-r from-transparent via-accent/50 to-transparent mx-auto mb-4" />
-            <p className="text-lg font-medium tracking-widest uppercase text-white/90">
-              Эффективность · Надежность · Результат
-            </p>
           </div>
         </div>
 
         <button
           onClick={() => scrollToSection('about')}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white animate-bounce"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white animate-bounce hover:scale-110 transition-transform"
         >
           <Icon name="ChevronDown" size={48} />
         </button>
