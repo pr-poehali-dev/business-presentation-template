@@ -6,6 +6,9 @@ import AboutVariant3 from '@/components/AboutVariant3';
 import AboutVariant4 from '@/components/AboutVariant4';
 import AboutVariant5 from '@/components/AboutVariant5';
 import AboutVariant6 from '@/components/AboutVariant6';
+import AboutVariant7 from '@/components/AboutVariant7';
+import AboutVariant8 from '@/components/AboutVariant8';
+import AboutVariant9 from '@/components/AboutVariant9';
 
 const AboutVariants = () => {
   const [activeVariant, setActiveVariant] = useState(1);
@@ -59,6 +62,27 @@ const AboutVariants = () => {
               >
                 Вариант 6
               </Button>
+              <Button
+                variant={activeVariant === 7 ? 'default' : 'outline'}
+                onClick={() => setActiveVariant(7)}
+                size="sm"
+              >
+                Вариант 7
+              </Button>
+              <Button
+                variant={activeVariant === 8 ? 'default' : 'outline'}
+                onClick={() => setActiveVariant(8)}
+                size="sm"
+              >
+                Вариант 8
+              </Button>
+              <Button
+                variant={activeVariant === 9 ? 'default' : 'outline'}
+                onClick={() => setActiveVariant(9)}
+                size="sm"
+              >
+                Вариант 9
+              </Button>
             </div>
           </div>
           <p className="text-sm text-muted-foreground mt-2">
@@ -68,6 +92,9 @@ const AboutVariants = () => {
             {activeVariant === 4 && 'Сетка 3 колонки с одинаковыми карточками'}
             {activeVariant === 5 && 'Вертикальный список с текстом в 2 колонках'}
             {activeVariant === 6 && 'Минималистичная сетка 2 колонки без фонов'}
+            {activeVariant === 7 && 'Комбинированная: текст 2/3 + 2 карточки справа + сетка 5 внизу'}
+            {activeVariant === 8 && 'Центральная ось: текст сверху + сетка 2 колонки с вертикальным разделителем'}
+            {activeVariant === 9 && 'Крупная текстовая карточка + сетка 4 колонки компактных блоков'}
           </p>
         </div>
       </div>
@@ -79,6 +106,9 @@ const AboutVariants = () => {
         {activeVariant === 4 && <AboutVariant4 />}
         {activeVariant === 5 && <AboutVariant5 />}
         {activeVariant === 6 && <AboutVariant6 />}
+        {activeVariant === 7 && <AboutVariant7 />}
+        {activeVariant === 8 && <AboutVariant8 />}
+        {activeVariant === 9 && <AboutVariant9 />}
       </div>
 
       <div className="bg-slate-100 py-12">
@@ -132,6 +162,30 @@ const AboutVariants = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   Текст крупно по центру без карточек. Преимущества сеткой 2 колонки без фонов, только иконки и текст. 
                   Максимум воздуха и минимализм. Последний пункт занимает 2 колонки.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-accent pl-6">
+                <h4 className="text-xl font-bold text-primary mb-2">Вариант 7: Комбинированная раскладка</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Текст занимает 2/3 ширины слева, справа 2 вертикальные карточки. Внизу остальные преимущества сеткой 5 колонок. 
+                  Динамичная асимметрия с градиентным фоном.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-accent pl-6">
+                <h4 className="text-xl font-bold text-primary mb-2">Вариант 8: Центральная ось</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Текст крупно по центру сверху. Преимущества в сетке 2 колонки с вертикальной цветной линией-разделителем посередине. 
+                  Верхняя цветная полоса-акцент. Последний пункт на всю ширину.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-accent pl-6">
+                <h4 className="text-xl font-bold text-primary mb-2">Вариант 9: Крупная карточка + компактные блоки</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Текст в крупной карточке с иконками. Преимущества компактными блоками в сетке 4 колонки. 
+                  Hover-эффекты с подъёмом карточек. Последний пункт занимает 2 колонки.
                 </p>
               </div>
             </div>
