@@ -10,28 +10,28 @@ const PropertyTypesVariants = () => {
       id: 1,
       title: 'Торговая',
       description: 'Торговые центры, магазины, ритейл',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/f72443a8-f1a7-4a98-bd88-acde338f5a61.jpg',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/19fad273-85b5-4e31-b6ee-b97f86f3d238.jpg',
       icon: 'ShoppingBag'
     },
     {
       id: 2,
       title: 'Складская',
       description: 'Логистические комплексы, склады',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/aa75bfca-11ce-4fa0-9cb4-b595f0ee4b88.jpg',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/bcda70e1-6fcc-4429-a6b8-0f2a69d7dd0a.jpg',
       icon: 'Package'
     },
     {
       id: 3,
       title: 'Офисная',
       description: 'Бизнес-центры, офисные здания',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/43079d43-5c63-4ca0-b263-afdab4a5cbb3.jpg',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/09513fdd-5273-45bb-820e-eaa9ec2c49cf.jpg',
       icon: 'Briefcase'
     },
     {
       id: 4,
       title: 'Жилая',
       description: 'Жилые комплексы, апартаменты',
-      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/83d8b493-27e6-4ea1-8398-1d6ebfb2b139.jpg',
+      image: 'https://cdn.poehali.dev/projects/3f3712b0-b632-471e-bd7d-a5a2cc62d4e5/files/51feef5d-1c27-4960-90dd-a5e7272382cf.jpg',
       icon: 'Home'
     }
   ];
