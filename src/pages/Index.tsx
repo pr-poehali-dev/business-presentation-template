@@ -149,14 +149,14 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-accent">
+      <section className="py-20 bg-accent border-t-4 border-slate-800/20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
                 <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-accent rounded-full">
-                    <Icon name={stat.icon} size={48} className="text-white" />
+                  <div className="p-3 bg-accent rounded-full">
+                    <Icon name={stat.icon} size={38} className="text-white" />
                   </div>
                 </div>
                 <div className="text-4xl font-black text-primary mb-2">{stat.value}</div>
@@ -169,8 +169,8 @@ const Index = () => {
             {achievements.map((achievement, index) => (
               <div key={index} className="bg-white rounded-xl p-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center gap-3">
-                  <div className="p-3 bg-accent rounded-lg">
-                    <Icon name={achievement.icon} size={24} className="text-white" />
+                  <div className="p-2.5 bg-accent rounded-lg">
+                    <Icon name={achievement.icon} size={20} className="text-white" />
                   </div>
                   <span className="text-sm font-semibold text-primary leading-tight">{achievement.title}</span>
                 </div>
